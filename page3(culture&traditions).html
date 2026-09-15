@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ประเพณีและเทศกาล | สุราษฎร์ธานี</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tahoma", "Arial", sans-serif;
+    background: #f2fbff;
+    color: #16485d;
+    line-height: 1.9;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   SCROLL BAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e8f8fc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#00b5dc, #007da5);
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    padding: 15px 6%;
+
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 3px 20px rgba(0,120,160,0.12);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #008aae;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #276477;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #00a7d3;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    height: 100vh;
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(0,120,165,.55),
+            rgba(0,180,215,.45)
+        ),
+
+        /* รูปงานชักพระ สุราษฎร์ธานี ปี 2568 */
+
+        url("https://ak-d.tripcdn.com/images/1mi2v224x95rs875c71EB.jpg?proc=source%2Ftrip");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* วงกลมตกแต่ง */
+
+.hero::before {
+
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+
+    top: -150px;
+    right: -100px;
+}
+
+.hero::after {
+
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.07);
+
+    bottom: -100px;
+    left: -80px;
+}
+
+
+.hero-content {
+
+    position: relative;
+    z-index: 5;
+
+    max-width: 900px;
+    padding: 30px;
+}
+
+.hero-small {
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    opacity: .9;
+}
+
+.hero h1 {
+
+    font-size: clamp(45px, 7vw, 82px);
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.25);
+}
+
+.hero p {
+
+    font-size: 20px;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    opacity: .95;
+}
+
+
+/* =====================================================
+   SCROLL DOWN
+===================================================== */
+
+.scroll-down {
+
+    position: absolute;
+
+    bottom: 45px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    z-index: 5;
+}
+
+.scroll-down span {
+
+    display: block;
+
+    width: 25px;
+    height: 40px;
+
+    border: 2px solid white;
+
+    border-radius: 20px;
+
+    margin: 10px auto 0;
+
+    position: relative;
+}
+
+.scroll-down span::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 8px;
+
+    background: white;
+
+    border-radius: 5px;
+
+    left: 50%;
+    top: 7px;
+
+    transform: translateX(-50%);
+
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+
+    0% {
+        opacity: 0;
+        transform: translate(-50%,0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%,15px);
+    }
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 110px 30px 90px;
+
+    text-align: center;
+}
+
+.section-label {
+
+    color: #00a2cc;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+
+    font-size: 42px;
+
+    color: #007fa6;
+
+    margin-bottom: 25px;
+}
+
+.intro p {
+
+    font-size: 18px;
+
+    color: #587d8b;
+}
+
+
+/* =====================================================
+   WAVE DIVIDER
+===================================================== */
+
+.wave {
+
+    width: 100%;
+
+    height: 100px;
+
+    position: relative;
+
+    margin-bottom: -1px;
+
+    background: #f2fbff;
+
+    clip-path: ellipse(75% 60% at 50% 100%);
+}
+
+
+/* =====================================================
+   STORY SECTION
+===================================================== */
+
+.story {
+
+    position: relative;
+
+    padding: 100px 7%;
+
+    overflow: hidden;
+}
+
+.story:nth-child(odd) {
+
+    background: white;
+}
+
+
+/* เส้นตกแต่งด้านซ้าย */
+
+.story::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 40px;
+
+    top: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background: linear-gradient(
+        transparent,
+        #8cdeef,
+        transparent
+    );
+
+    opacity: .5;
+}
+
+
+/* =====================================================
+   STORY CONTAINER
+===================================================== */
+
+.story-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.story-number {
+
+    font-size: 90px;
+
+    line-height: 1;
+
+    font-weight: bold;
+
+    color: #dff6fb;
+
+    margin-bottom: -25px;
+
+    position: relative;
+
+    z-index: -1;
+}
+
+.story-label {
+
+    color: #00a3cb;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   STORY IMAGE
+===================================================== */
+
+.story-image {
+
+    width: 100%;
+
+    height: 500px;
+
+    margin-top: 25px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,100,140,.18);
+
+    position: relative;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: transform .7s ease;
+}
+
+
+/* =====================================================
+   รูปประเพณีต่าง ๆ
+   ทุกภาพอยู่ในช่วงปี 2565-2568
+===================================================== */
+
+
+/* 01 — ชักพระ
+   ภาพงานชักพระสุราษฎร์ธานี 2568
+*/
+
+.story-image.chak-phra {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,150,190,.08),
+            rgba(0,150,190,.08)
+        ),
+
+        url("https://ak-d.tripcdn.com/images/1mi2v224x95rs875c71EB.jpg?proc=source%2Ftrip");
+}
+
+
+/* 02 — สารทเดือนสิบ
+   ภาพประเพณีสารทเดือนสิบ ปี 2566
+*/
+
+.story-image.sart {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,150,190,.08),
+            rgba(0,150,190,.08)
+        ),
+
+        url("https://media.komchadluek.net/uploads/images/contents/w1024/2023/09/oM6IRdMvPHaFElxAyRiR.webp?x-image-process=style%2Flg-webp");
+}
+
+
+/* 03 — เงาะโรงเรียนนาสาร
+   ภาพเทศกาลเงาะโรงเรียนนาสาร ปี 2565
+*/
+
+.story-image.rambutan {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,150,190,.08),
+            rgba(0,150,190,.08)
+        ),
+
+        url("https://www.suratcity.go.th/web/components/com_flexicontent/uploads/27-10-2.jpg");
+}
+
+
+/* 04 — แข่งขันเรือยาว
+   ภาพการแข่งขันเรือยาวลำน้ำตาปี ปี 2566
+*/
+
+.story-image.boat {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,150,190,.08),
+            rgba(0,150,190,.08)
+        ),
+
+        url("https://wisatathailand.id/images/event/chak-phra-robe-offering-and-long-boat-racing-festival-651d2e131afcf5.30150743.png");
+}
+
+
+/* 05 — ทอดผ้าป่า
+   ภาพกิจกรรมชักพระทอดผ้าป่า ปี 2568
+*/
+
+.story-image.pha-pa {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,150,190,.08),
+            rgba(0,150,190,.08)
+        ),
+
+        url("https://www.srtc.ac.th/2020/images/56.8.jpg");
+}
+
+
+.story-image:hover {
+
+    transform: scale(1.015);
+}
+
+
+/* =====================================================
+   IMAGE CAPTION
+===================================================== */
+
+.image-caption {
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 50px 30px 25px;
+
+    color: white;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,40,60,.7)
+    );
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   TEXT CONTENT
+===================================================== */
+
+.story-content {
+
+    max-width: 900px;
+
+    margin: 45px auto 0;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 40px rgba(0,110,150,.08);
+}
+
+.story:nth-child(odd) .story-content {
+
+    background: #f7fdff;
+}
+
+
+.story-content h2 {
+
+    color: #007fa6;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+}
+
+.story-content p {
+
+    font-size: 17px;
+
+    color: #587986;
+
+    margin-bottom: 18px;
+
+    text-align: justify;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote {
+
+    margin-top: 30px;
+
+    padding: 25px 30px;
+
+    border-left: 5px solid #00a8d2;
+
+    background: #eafaff;
+
+    border-radius: 0 15px 15px 0;
+
+    color: #287086;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   HIGHLIGHT BOX
+===================================================== */
+
+.highlight-box {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7faff,
+            #f8fdff
+        );
+
+    border: 1px solid #c7eef6;
+}
+
+.highlight-box strong {
+
+    color: #008caf;
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final {
+
+    padding: 120px 30px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(0,115,155,.85),
+            rgba(0,174,210,.85)
+        ),
+
+        url("https://ak-d.tripcdn.com/images/1mi2v224x95rs875c71EB.jpg?proc=source%2Ftrip");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+.final h2 {
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.final p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-top {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 22px;
+
+    background: #009bc4;
+
+    box-shadow:
+        0 8px 25px rgba(0,120,160,.25);
+
+    transition: .3s;
+
+    z-index: 100;
+}
+
+.back-top:hover {
+
+    transform: translateY(-5px);
+
+    background: #007da5;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #063f55;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer p {
+
+    opacity: .8;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:768px) {
+
+    .nav-container {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .nav-links {
+
+        gap: 15px;
+
+        font-size: 13px;
+    }
+
+    .hero {
+
+        min-height: 600px;
+
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+    }
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+    .intro {
+
+        padding: 80px 20px;
+    }
+
+    .intro h2 {
+
+        font-size: 30px;
+    }
+
+    .story {
+
+        padding: 80px 20px;
+    }
+
+    .story::before {
+
+        display: none;
+    }
+
+    .story-number {
+
+        font-size: 65px;
+    }
+
+    .story-image {
+
+        height: 330px;
+
+        border-radius: 20px;
+    }
+
+    .story-content {
+
+        padding: 28px 22px;
+
+        border-radius: 20px;
+    }
+
+    .story-content h2 {
+
+        font-size: 27px;
+    }
+
+    .story-content p {
+
+        font-size: 16px;
+
+        text-align: left;
+    }
+
+    .final h2 {
+
+        font-size: 32px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            SURAT THANI
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">หน้าหลัก</a>
+            </li>
+
+            <li>
+                <a href="#traditions">ประเพณี</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero" id="top">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            SURAT THANI • CULTURE
+        </div>
+
+        <h1>
+            ประเพณีและเทศกาล
+        </h1>
+
+        <p>
+            เรื่องราวแห่งศรัทธา วิถีชีวิต และวัฒนธรรม
+            ที่สืบทอดจากรุ่นสู่รุ่นของชาวสุราษฎร์ธานี
+        </p>
+
+    </div>
+
+
+    <a href="#traditions" class="scroll-down">
+
+        SCROLL TO EXPLORE
+
+        <span></span>
+
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="intro" id="traditions">
+
+    <div class="section-label">
+        LOCAL CULTURE
+    </div>
+
+    <h2>
+        เสน่ห์แห่งวัฒนธรรมสุราษฎร์ธานี
+    </h2>
+
+    <p>
+        สุราษฎร์ธานีเป็นจังหวัดที่มีความหลากหลายทางวัฒนธรรม
+        และมีประเพณีที่สืบทอดต่อกันมาอย่างยาวนาน
+        ทั้งประเพณีที่เกี่ยวข้องกับพระพุทธศาสนา
+        วิถีชีวิตของชุมชน และความสัมพันธ์ระหว่างผู้คนกับสายน้ำ
+        รวมถึงเทศกาลที่สะท้อนเอกลักษณ์ของท้องถิ่น
+    </p>
+
+</section>
+
+
+<div class="wave"></div>
+
+
+
+<!-- =====================================================
+     STORY 01
+===================================================== -->
+
+<section class="story">
+
+    <div class="story-container">
+
+        <div class="story-number">
+            01
+        </div>
+
+        <div class="story-label">
+            BUDDHIST TRADITION
+        </div>
+
+
+        <div class="story-image chak-phra">
+
+            <div class="image-caption">
+                ประเพณีชักพระ — หนึ่งในประเพณีสำคัญของภาคใต้
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <h2>
+                ประเพณีชักพระ
+            </h2>
+
+            <p>
+                ประเพณีชักพระ หรือประเพณีลากพระ
+                หรือประเพณีแห่พระ เป็นประเพณีทางพระพุทธศาสนา
+                ซึ่งพบมากในภาคใต้ของประเทศไทย
+                โดยจัดขึ้นในวันหลังวันออกพรรษา
+            </p>
+
+            <p>
+                ภายในงานจะมีการอัญเชิญพระพุทธรูปออกแห่รอบเมือง
+                ถือเป็นการจำลองเหตุการณ์ครั้งที่พระพุทธเจ้า
+                เสด็จกลับจากสวรรค์ชั้นดาวดึงส์
+            </p>
+
+            <p>
+                พระพุทธรูปจะถูกอัญเชิญขึ้นประดิษฐานบน
+                "เรือพระ" แล้วชักลากไปในพื้นที่ต่าง ๆ
+                เพื่อให้ชาวบ้านได้ร่วมทำบุญ
+            </p>
+
+            <div class="highlight-box">
+
+                <strong>เรือพระมี 2 ประเภท</strong>
+
+                <p>
+                    • เรือพระบก — สำหรับแห่ทางบก
+                    <br>
+                    • เรือพระน้ำ — สำหรับแห่ทางน้ำ
+                </p>
+
+                <p>
+                    เรือพระจะได้รับการประดับตกแต่ง
+                    อย่างสวยงาม เป็นอีกหนึ่งจุดเด่น
+                    ของประเพณีชักพระ
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STORY 02
+===================================================== -->
+
+<section class="story">
+
+    <div class="story-container">
+
+        <div class="story-number">
+            02
+        </div>
+
+        <div class="story-label">
+            TRADITION
+        </div>
+
+
+        <div class="story-image sart">
+
+            <div class="image-caption">
+                ประเพณีสารทเดือนสิบ — ความกตัญญูต่อบรรพบุรุษ
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <h2>
+                ประเพณีสารทเดือนสิบ
+            </h2>
+
+            <p>
+                ประเพณีสารทเดือนสิบเป็นประเพณีสำคัญ
+                ที่จัดขึ้นเพื่อทำบุญอุทิศแก่บรรพบุรุษ
+                ผู้ล่วงลับไปแล้ว
+            </p>
+
+            <p>
+                ประเพณีนี้ตรงกับวันสิ้นเดือน 10
+                หรือวันแรม 15 ค่ำ เดือน 10
+                ซึ่งเป็นช่วงที่พืชพันธุ์ธัญญาหาร
+                กำลังออกดอกออกผล
+            </p>
+
+            <div class="quote">
+
+                "ประเพณีที่สะท้อนความกตัญญู
+                ความผูกพันของครอบครัว
+                และความเชื่อที่สืบทอดต่อกันมา"
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STORY 03
+===================================================== -->
+
+<section class="story">
+
+    <div class="story-container">
+
+        <div class="story-number">
+            03
+        </div>
+
+        <div class="story-label">
+            LOCAL FRUIT FESTIVAL
+        </div>
+
+
+        <div class="story-image rambutan">
+
+            <div class="image-caption">
+                เทศกาลเงาะโรงเรียนนาสาร — ผลไม้เอกลักษณ์ของบ้านนาสาร
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <h2>
+                เทศกาลเงาะโรงเรียนนาสาร
+            </h2>
+
+            <p>
+                งานวันเงาะโรงเรียน หรือที่รู้จักกันในชื่อ
+                "งานเทศกาลเงาะโรงเรียนนาสาร"
+                เป็นงานประจำปีที่จัดขึ้นในอำเภอบ้านนาสาร
+                จังหวัดสุราษฎร์ธานี
+            </p>
+
+            <p>
+                งานนี้จัดขึ้นเพื่อเฉลิมฉลองและประชาสัมพันธ์
+                "เงาะโรงเรียน" ซึ่งเป็นผลไม้ชื่อดัง
+                ที่มีรสชาติดีและเป็นเอกลักษณ์ของท้องถิ่น
+            </p>
+
+            <div class="highlight-box">
+
+                <strong>ช่วงเวลาจัดงาน</strong>
+
+                <p>
+                    โดยปกติงานจะจัดขึ้นเป็นประจำทุกปี
+                    ในช่วงเดือนกรกฎาคมถึงสิงหาคม
+                    ณ บริเวณริมคลองฉวาง
+                    อำเภอบ้านนาสาร
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STORY 04
+===================================================== -->
+
+<section class="story">
+
+    <div class="story-container">
+
+        <div class="story-number">
+            04
+        </div>
+
+        <div class="story-label">
+            WATER & COMMUNITY
+        </div>
+
+
+        <div class="story-image boat">
+
+            <div class="image-caption">
+                การแข่งขันเรือยาว — วิถีชีวิตคู่สายน้ำตาปี
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <h2>
+                การแข่งขันเรือยาว
+            </h2>
+
+            <p>
+                การแข่งขันเรือยาวเป็นกิจกรรมสำคัญ
+                ที่จัดร่วมกับงานชักพระ–ทอดผ้าป่า
+                ของจังหวัดสุราษฎร์ธานี
+            </p>
+
+            <p>
+                การแข่งขันจัดขึ้นบริเวณแม่น้ำตาปี
+                ซึ่งเป็นสายน้ำสำคัญที่ไหลผ่านตัวเมือง
+                สะท้อนให้เห็นถึงความผูกพัน
+                ของชาวสุราษฎร์ธานีกับสายน้ำ
+                และวิถีชีวิตของชุมชนริมน้ำ
+            </p>
+
+            <p>
+                นอกจากจะสร้างความสนุกสนานให้แก่ประชาชนแล้ว
+                ยังช่วยส่งเสริมความสามัคคี
+                และการมีส่วนร่วมของคนในท้องถิ่น
+            </p>
+
+            <div class="highlight-box">
+
+                <strong>การสืบทอดวัฒนธรรม</strong>
+
+                <p>
+                    ปัจจุบันมีการจัดการแข่งขันเรือยาว
+                    ชิงถ้วยพระราชทาน
+                    และอนุรักษ์ให้เป็นส่วนหนึ่ง
+                    ของงานประเพณีสำคัญของจังหวัด
+                    เพื่อสืบทอดวัฒนธรรม
+                    และส่งเสริมการท่องเที่ยว
+                    ของสุราษฎร์ธานี
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STORY 05
+===================================================== -->
+
+<section class="story">
+
+    <div class="story-container">
+
+        <div class="story-number">
+            05
+        </div>
+
+        <div class="story-label">
+            BUDDHISM & COMMUNITY
+        </div>
+
+
+        <div class="story-image pha-pa">
+
+            <div class="image-caption">
+                ประเพณีทอดผ้าป่า — ศรัทธาและความร่วมมือของชุมชน
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <h2>
+                ประเพณีทอดผ้าป่า
+            </h2>
+
+            <p>
+                ประเพณีทอดผ้าป่าของจังหวัดสุราษฎร์ธานี
+                เป็นประเพณีสำคัญที่จัดควบคู่กับงานชักพระ
+                ในช่วงเทศกาลออกพรรษา หรือเดือน 11
+                และสืบทอดมายาวนานกว่า 100 ปี
+            </p>
+
+            <p>
+                จุดเด่นของประเพณีคือ
+                "การจัดพุ่มผ้าป่าหน้าบ้าน"
+                โดยชาวบ้านจะนำผ้าอาบน้ำฝน
+                เครื่องอัฐบริขาร และปิ่นโต
+                มาจัดเป็นพุ่มพร้อมประดับตกแต่ง
+                อย่างสวยงาม
+            </p>
+
+            <p>
+                การจัดพุ่มผ้าป่าจะเกิดขึ้นในคืนขึ้น 15 ค่ำ
+                เดือน 11 และในเช้าวันออกพรรษา
+                จะนิมนต์พระสงฆ์มารับบิณฑบาต
+                และชักพุ่มผ้าป่า
+            </p>
+
+            <div class="quote">
+
+                ประเพณีทอดผ้าป่าสะท้อนถึงความศรัทธา
+                ในพระพุทธศาสนา ความร่วมมือของคนในชุมชน
+                และเป็นเอกลักษณ์โดดเด่นของชาวสุราษฎร์ธานี
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <h2>
+        มากกว่าการท่องเที่ยว
+    </h2>
+
+    <p>
+        เพราะการเดินทางไม่ได้มีเพียงสถานที่ให้เราไปเยือน
+        แต่ยังเป็นโอกาสให้เราได้เรียนรู้ผู้คน
+        วิถีชีวิต ความเชื่อ และเรื่องราว
+        ที่ทำให้สุราษฎร์ธานีมีเสน่ห์ในแบบของตัวเอง
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 Surat Thani Travel
+    </p>
+
+    <p>
+        เว็บไซต์แนะนำจังหวัดสุราษฎร์ธานี
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<a href="#top" class="back-top">
+    ↑
+</a>
+
+
+</body>
+</html>
