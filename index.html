@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>สุราษฎร์ธานี เมืองคนดี</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tahoma", sans-serif;
+    background: #f4fbff;
+    color: #123b50;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 20px rgba(0,80,120,0.12);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #087ea4;
+}
+
+nav a {
+    text-decoration: none;
+    color: #15546b;
+    margin-left: 30px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00a8d6;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0,80,120,0.35),
+            rgba(0,40,70,0.55)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Koh%20Samui%2C%20Island%2C%20Beach%2C%20Thailand.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 850px;
+    padding: 30px;
+}
+
+.hero-label {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+
+    text-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    background: white;
+    color: #087ea4;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.3);
+}
+
+
+/* ================= EXPLORE ================= */
+
+.explore {
+    padding: 100px 7%;
+    background: #f4fbff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: #087ea4;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #527889;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.card {
+    background: white;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+    color: inherit;
+
+    box-shadow:
+        0 8px 30px rgba(0,100,140,0.10);
+
+    transition: 0.35s;
+
+    border: 1px solid rgba(0,150,200,0.08);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(0,100,140,0.18);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+.card:hover .card-image {
+    transform: scale(1.06);
+}
+
+.card-content {
+    padding: 23px;
+}
+
+.card-content h3 {
+    font-size: 21px;
+    color: #087ea4;
+    margin-bottom: 9px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #668694;
+    line-height: 1.7;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #073b52;
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    line-height: 2;
+    color: #cce8f2;
+}
+
+.footer-line {
+    width: 70px;
+    height: 3px;
+
+    background: #42c6e8;
+
+    margin: 20px auto;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .explore {
+        padding: 70px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        สุราษฎร์ธานี
+    </div>
+
+    <div>
+
+        <a href="#explore">
+            สำรวจ
+        </a>
+
+        <a href="#footer">
+            ผู้จัดทำ
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            SURAT THANI TRAVEL
+        </div>
+
+        <h1>
+            สุราษฎร์ธานี<br>
+            เมืองคนดี
+        </h1>
+
+        <p>
+            สำรวจเรื่องราว สถานที่ และวิถีชีวิต
+            ของจังหวัดสุราษฎร์ธานี
+        </p>
+
+        <a href="#explore" class="hero-button">
+            สำรวจสุราษฎร์
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXPLORE ================= -->
+
+<section class="explore" id="explore">
+
+    <div class="section-title">
+
+        <h2>
+            สำรวจสุราษฎร์ธานี
+        </h2>
+
+        <p>
+            เลือกหัวข้อที่ต้องการศึกษา
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- 1 ประวัติศาสตร์ -->
+
+        <a href="ประวัติศาสตร์.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://ak-d.tripcdn.com/images/1mi022234ax2yg0u8C3A5_R_600_400_R5_Q90.jpg?proc=source%2Ftrip"
+                    alt="ประวัติศาสตร์สุราษฎร์ธานี"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>ประวัติศาสตร์</h3>
+
+                <p>
+                    เรื่องราวและพัฒนาการของสุราษฎร์ธานี
+                    จากอดีตจนถึงปัจจุบัน
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 2 สถานที่ท่องเที่ยว -->
+
+        <a href="สถานที่ท่องเที่ยว.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Koh%20Samui%2C%20Island%2C%20Beach%2C%20Thailand.jpg"
+                    alt="เกาะสมุย สุราษฎร์ธานี"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>สถานที่ท่องเที่ยว</h3>
+
+                <p>
+                    แหล่งท่องเที่ยวทางธรรมชาติ
+                    ทะเล เกาะ และสถานที่สำคัญ
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 3 วัฒนธรรมและประเพณี -->
+
+        <a href="วัฒนธรรมและประเพณี.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://api.tourismthailand.org/upload/live/content_article/1124-33190.jpeg"
+                    alt="วัฒนธรรมและประเพณีสุราษฎร์ธานี"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>วัฒนธรรมและประเพณี</h3>
+
+                <p>
+                    เรียนรู้วัฒนธรรม ประเพณี
+                    และภูมิปัญญาท้องถิ่น
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 4 อาหาร -->
+
+        <a href="อาหาร.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Talat%2C%20Surat%20Thani%2C%20Thailand%2C%2026%20April%202025%20-%20Food.jpg"
+                    alt="อาหารสุราษฎร์ธานี"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>อาหาร</h3>
+
+                <p>
+                    รสชาติอาหารพื้นถิ่น
+                    และของขึ้นชื่อของสุราษฎร์ธานี
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 5 หัตถกรรม -->
+
+        <a href="หัตถกรรม.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Weaving%20with%20palm%20leaves.jpg"
+                    alt="งานจักสาน"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>หัตถกรรม</h3>
+
+                <p>
+                    งานฝีมือและภูมิปัญญา
+                    ที่สืบทอดจากคนในท้องถิ่น
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 6 วิถีชีวิต -->
+
+        <a href="วิถีชีวิต.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://www.asiakingtravel.com/cuploads/files/c4c217386685c3db9a94.jpg"
+                    alt="วิถีชีวิตสุราษฎร์ธานี"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>วิถีชีวิต</h3>
+
+                <p>
+                    วิถีชีวิตของชุมชน
+                    และความสัมพันธ์กับสายน้ำ
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 7 ศาสนา -->
+
+        <a href="ศาสนา.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://bangkokattractions.com/wp-content/uploads/2019/11/things-to-do-in-surat-thani.jpg"
+                    alt="ศาสนาและวัดในสุราษฎร์ธานี"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>ศาสนา</h3>
+
+                <p>
+                    ศาสนา ความเชื่อ
+                    และสถานที่สำคัญทางศาสนา
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- 8 ภาษา -->
+
+        <a href="ภาษา.html" class="card">
+
+            <div class="card-image-container">
+
+                <img
+                    class="card-image"
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Southern%20Thai.jpg"
+                    alt="ภาษาไทยถิ่นใต้"
+                >
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>ภาษา</h3>
+
+                <p>
+                    ภาษาและสำเนียงท้องถิ่น
+                    ที่สะท้อนเอกลักษณ์ของภาคใต้
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="footer">
+
+    <h3>
+        ผู้จัดทำ
+    </h3>
+
+    <div class="footer-line"></div>
+
+    <p>
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6/2
+    </p>
+
+    <p>
+        นายพีรพัฒน์ สุมาลี เลขที่ 13
+    </p>
+
+    <p>
+        นางสาวสโรชา ใจเสือกุล เลขที่ 38
+    </p>
+
+    <p>
+        นางสาวอรวรรยา จรรยาธรรม เลขที่ 39
+    </p>
+
+</footer>
+
+
+</body>
+</html>
