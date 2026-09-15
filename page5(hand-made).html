@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>หัตถกรรมสุราษฎร์ธานี | Surat Thani Heritage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Sarabun", sans-serif;
+            color: #173b52;
+            background: #f5fbfe;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #eaf7fc;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #58b8d8;
+            border-radius: 20px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(255,255,255,0.82);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(70,180,215,0.18);
+
+            transition: 0.3s;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 8px 30px rgba(30,130,165,0.12);
+        }
+
+        .logo {
+            font-family: "Kanit", sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #168bb5;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #173b52;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #168bb5;
+            font-weight: 500;
+
+            padding: 8px 20px;
+            border: 1px solid #8bd3e8;
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #168bb5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            padding: 120px 20px 100px;
+
+            background:
+                linear-gradient(
+                    rgba(235,249,254,0.45),
+                    rgba(245,252,255,0.60)
+                ),
+                url("https://image.posttoday.com/media/content/2022/06/21/2D46FBB36033C7015FA046B65DE9E75D.jpg?x-image-process=style%2Flg-webp");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            background: rgba(92,198,226,0.10);
+
+            border-radius: 50%;
+
+            top: -250px;
+            right: -180px;
+
+            filter: blur(5px);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .small-title {
+            display: inline-block;
+
+            padding: 7px 20px;
+
+            border: 1px solid #8ed7e9;
+            border-radius: 30px;
+
+            color: #168bb5;
+            background: rgba(255,255,255,0.72);
+
+            margin-bottom: 25px;
+
+            font-size: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Kanit", sans-serif;
+
+            font-size: clamp(45px, 7vw, 90px);
+
+            line-height: 1.05;
+
+            color: #126d91;
+
+            margin-bottom: 25px;
+
+            letter-spacing: 1px;
+
+            text-shadow: 0 2px 10px rgba(255,255,255,0.5);
+        }
+
+        .hero h1 span {
+            color: #55b9d5;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+
+            font-size: 18px;
+            color: #315e70;
+
+            text-shadow: 0 1px 5px rgba(255,255,255,0.7);
+        }
+
+        .scroll-down {
+            display: inline-block;
+
+            margin-top: 45px;
+
+            text-decoration: none;
+
+            color: #168bb5;
+
+            font-size: 14px;
+
+            animation: floating 2s infinite;
+        }
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+
+        }
+
+        /* =========================
+           WAVE
+        ========================= */
+
+        .wave {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+
+            width: 100%;
+            height: 100px;
+
+            background: #f5fbfe;
+
+            clip-path: ellipse(75% 55% at 50% 100%);
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 65px;
+        }
+
+        .section-title small {
+            color: #35a8c9;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-family: "Kanit", sans-serif;
+
+            font-size: clamp(34px, 5vw, 55px);
+
+            color: #155b78;
+
+            margin-top: 5px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 10px auto 0;
+
+            color: #688695;
+        }
+
+        /* =========================
+           CRAFT CARD
+        ========================= */
+
+        .craft {
+            background: white;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            margin-bottom: 100px;
+
+            box-shadow:
+                0 20px 60px rgba(40,145,175,0.10);
+
+            border: 1px solid rgba(91,190,218,0.18);
+
+            transition: 0.4s;
+        }
+
+        .craft:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 30px 80px rgba(40,145,175,0.17);
+        }
+
+        .craft-image {
+            height: 430px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .craft-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.7s;
+        }
+
+        .craft:hover .craft-image img {
+            transform: scale(1.05);
+        }
+
+        .number {
+            position: absolute;
+
+            top: 25px;
+            left: 25px;
+
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.88);
+
+            backdrop-filter: blur(10px);
+
+            color: #168bb5;
+
+            font-family: "Kanit", sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .craft-content {
+            padding: 50px 60px 60px;
+        }
+
+        .craft-content h3 {
+            font-family: "Kanit", sans-serif;
+
+            font-size: 36px;
+
+            color: #176985;
+
+            margin-bottom: 25px;
+        }
+
+        .craft-content h3::after {
+            content: "";
+
+            display: block;
+
+            width: 70px;
+            height: 4px;
+
+            margin-top: 12px;
+
+            border-radius: 10px;
+
+            background: #5fc4df;
+        }
+
+        .craft-content p {
+            color: #526f7e;
+
+            font-size: 17px;
+
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            margin-top: 30px;
+
+            padding: 22px 25px;
+
+            background: #effaff;
+
+            border-left: 4px solid #51b9d6;
+
+            border-radius: 0 15px 15px 0;
+
+            color: #397083;
+        }
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote-section {
+            padding: 120px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dff6fc,
+                    #f8fdff
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: "“";
+
+            position: absolute;
+
+            font-family: Georgia, serif;
+
+            font-size: 350px;
+
+            color: rgba(60,175,205,0.09);
+
+            left: 3%;
+            top: -120px;
+        }
+
+        .quote {
+            position: relative;
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-family: "Kanit", sans-serif;
+
+            font-size: clamp(25px, 4vw, 42px);
+
+            line-height: 1.5;
+
+            color: #17627e;
+        }
+
+        .quote-author {
+            margin-top: 25px;
+
+            color: #67a3b7;
+        }
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            max-width: 800px;
+
+            margin: auto;
+
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 22px;
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+
+            background: #a7ddea;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 70px;
+
+            margin-bottom: 45px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 9px;
+            top: 5px;
+
+            width: 28px;
+            height: 28px;
+
+            background: white;
+
+            border: 6px solid #54b9d5;
+
+            border-radius: 50%;
+        }
+
+        .timeline-item h4 {
+            font-family: "Kanit", sans-serif;
+
+            color: #19718e;
+
+            font-size: 23px;
+
+            margin-bottom: 7px;
+        }
+
+        .timeline-item p {
+            color: #5c7784;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final-section {
+            text-align: center;
+
+            padding: 130px 20px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f5fbfe,
+                    #dff5fc
+                );
+        }
+
+        .final-section h2 {
+            font-family: "Kanit", sans-serif;
+
+            font-size: clamp(35px, 5vw, 60px);
+
+            color: #146782;
+
+            margin-bottom: 20px;
+        }
+
+        .final-section p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #607f8d;
+
+            font-size: 17px;
+        }
+
+        .back-home {
+            display: inline-block;
+
+            margin-top: 35px;
+
+            padding: 13px 30px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            background: #168bb5;
+
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(22,139,181,0.22);
+
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(22,139,181,0.30);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #12627d;
+
+            color: #d8f4fb;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(40px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .home-btn {
+                padding: 6px 14px;
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .craft-image {
+                height: 280px;
+            }
+
+            .craft-content {
+                padding: 35px 25px 40px;
+            }
+
+            .craft-content h3 {
+                font-size: 28px;
+            }
+
+            .craft-content p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .craft {
+                margin-bottom: 65px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav id="navbar">
+
+        <a href="index.html" class="logo">
+            SURAT <span>THANI</span>
+        </a>
+
+        <a href="index.html" class="home-btn">
+            ← หน้าหลัก
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                SURAT THANI HERITAGE
+            </div>
+
+            <h1>
+                หัตถกรรม<br>
+                <span>สุราษฎร์ธานี</span>
+            </h1>
+
+            <p>
+                งานฝีมือจากภูมิปัญญาท้องถิ่น ที่ถ่ายทอดเรื่องราว วิถีชีวิต และรากเหง้า ของผู้คนสุราษฎร์ธานีผ่านกาลเวลา
+            </p>
+
+            <a href="#crafts" class="scroll-down">
+                เลื่อนลงเพื่อสำรวจ ↓
+            </a>
+
+        </div>
+
+        <div class="wave"></div>
+
+    </header>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="section" id="crafts">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <small>LOCAL WISDOM</small>
+
+                <h2>มรดกจากฝีมือคนใต้</h2>
+
+                <p>
+                    หัตถกรรมแต่ละชิ้นไม่ได้เป็นเพียงสิ่งของ
+                    แต่คือเรื่องราวของผู้คน ธรรมชาติ
+                    และภูมิปัญญาที่ถูกส่งต่อจากรุ่นสู่รุ่น
+                </p>
+
+            </div>
+
+
+            <!-- =====================
+                 01 ผ้าทอพุมเรียง
+            ====================== -->
+
+            <article class="craft reveal">
+
+                <div class="craft-image">
+
+                    <img
+                        src="https://image.posttoday.com/media/content/2022/06/21/2D46FBB36033C7015FA046B65DE9E75D.jpg?x-image-process=style%2Flg-webp"
+                        alt="ผ้าทอพุมเรียง"
+                    >
+
+                    <div class="number">
+                        01
+                    </div>
+
+                </div>
+
+                <div class="craft-content">
+
+                    <h3>
+                        ผ้าทอพุมเรียง
+                    </h3>
+
+                    <p>
+                        ผ้าทอพุมเรียง มรดกหัตถศิลป์ล้ำค่าแห่งไชยา สะท้อนความวิจิตรผ่านเส้นไหมสลับดิ้นเงินดิ้นทอง ที่ถักทออย่างประณีต
+                    </p>
+
+                    <p>
+                        เกิดเป็นลวดลายยกดอกที่นูนเด่น มีมิติ และทอประกายระยิบระยับเงางาม อย่างหรูหราเกินบรรยาย
+                    </p>
+
+                    <p>
+                        ภูมิปัญญานี้สืบทอดมายาวนานนับร้อยปี โดยชาวไทยมุสลิมเชื้อสายมลายู ที่อพยพมาตั้งถิ่นฐานในพื้นที่
+                    </p>
+
+                    <p>
+                        แฝงความผูกพันในอดีตเมื่อครั้งรัชกาลที่ 5 เสด็จประพาส และทรงพระราชทานลาย “ราชวัตรโคม” ไว้เป็นเกียรติยศ
+                    </p>
+
+                    <div class="highlight">
+                        กลายเป็นลายอัตลักษณ์ประจำจังหวัดสุราษฎร์ธานี ที่งดงาม ทรงคุณค่า และเป็นเอกลักษณ์ ทางวัฒนธรรมที่ไม่เคยเสื่อมคลาย
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 02 กระจูดบ้านห้วยลึก
+            ====================== -->
+
+            <article class="craft reveal">
+
+                <div class="craft-image">
+
+                    <!-- รูปกระจูดจริง -->
+                    <img
+                        src="https://storage.googleapis.com/tripniceday/uploads/places/1625718387783.jpg"
+                        alt="กระจูดบ้านห้วยลึก"
+                    >
+
+                    <div class="number">
+                        02
+                    </div>
+
+                </div>
+
+                <div class="craft-content">
+
+                    <h3>
+                        กระจูดบ้านห้วยลึก
+                    </h3>
+
+                    <p>
+                        หัตถกรรมกระจูดบ้านห้วยลึก คือมรดกภูมิปัญญา จากป่าพรุสุราษฎร์ธานีที่สืบทอดวิถีชีวิตดั้งเดิม มาหลายชั่วอายุคนจากต้นพืชน้ำตามธรรมชาติ
+                    </p>
+
+                    <p>
+                        กระจูดถูกนำมาผ่านกระบวนการตากแห้ง คลุกดินขาว และรีดจนแบนด้วยความชำนาญ ของช่างฝีมือ ก่อนจะถักทอเป็นความงาม เชิงศิลปะ
+                    </p>
+
+                    <p>
+                        ลวดลายจักสานมีความละเอียดอ่อนและประณีต เกิดเป็นชิ้นงานที่มีผิวสัมผัสเรียบเนียน เหนียวแน่น และทนทาน
+                    </p>
+
+                    <p>
+                        จากอดีตเครื่องใช้ในครัวเรือน สู่งานดีไซน์ร่วมสมัย ถือเป็นความลงตัว ที่เชื่อมโยงอดีตกับคุณค่าแห่งอัตลักษณ์พื้นถิ่น
+                    </p>
+
+                    <div class="highlight">
+                        ธรรมชาติถูกเปลี่ยนผ่านฝีมือช่าง ให้กลายเป็นงานศิลป์ที่ยังคงกลิ่นอาย ของสุราษฎร์ธานีเอาไว้
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 03 กระเชอเกาะพะงัน
+            ====================== -->
+
+            <article class="craft reveal">
+
+                <div class="craft-image">
+
+                    <img
+                        src="https://img21.shop-pro.jp/PA01390/287/product/159694394.jpg"
+                        alt="กระเชอเกาะพะงัน"
+                    >
+
+                    <div class="number">
+                        03
+                    </div>
+
+                </div>
+
+                <div class="craft-content">
+
+                    <h3>
+                        กระเชอเกาะพะงัน
+                    </h3>
+
+                    <p>
+                        กระเชอเกาะพะงัน มรดกจักสานไม้ไผ่ ผสมผสานหวายและคลุ้ม อันเป็นเอกลักษณ์หนึ่งเดียวในโลก
+                    </p>
+
+                    <p>
+                        สะท้อนความประณีตของช่างฝีมือ ด้วยรูปทรงกลมมน แข็งแรง ทนทาน และเปี่ยมด้วยศิลปะการขึ้นรูปขั้นสูง
+                    </p>
+
+                    <p>
+                        จากเครื่องจักสานในวิถีชีวิตชาวเกาะโบราณ สู่ชิ้นงานศิลปหัตถกรรมที่ทรงคุณค่า และหาชมได้ยากในปัจจุบัน
+                    </p>
+
+                    <p>
+                        แฝงเรื่องราวการพึ่งพาธรรมชาติ ตามภูมิปัญญาดั้งเดิมที่สืบทอด และหล่อเลี้ยงจิตวิญญาณของชาวเกาะพะงัน
+                    </p>
+
+                    <div class="highlight">
+                        งานจักสานชิ้นเล็ก ๆ ที่บอกเล่ารากเหง้าและวิถีชีวิตของชาวเกาะ ได้อย่างลึกซึ้ง
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 04 ขมิ้นชัน
+            ====================== -->
+
+            <article class="craft reveal">
+
+                <div class="craft-image">
+
+                    <img
+                        src="https://www.tnnthailand.com/static/images/ca170c57-16ed-4ebe-96d5-8757e0e7d840.png"
+                        alt="ขมิ้นชันสุราษฎร์ธานี"
+                    >
+
+                    <div class="number">
+                        04
+                    </div>
+
+                </div>
+
+                <div class="craft-content">
+
+                    <h3>
+                        ขมิ้นชันสุราษฎร์ธานี
+                    </h3>
+
+                    <p>
+                        ขมิ้นชันสุราษฎร์ธานี เป็นสมุนไพรพื้นเมือง ที่มีประวัติการปลูกและส่งต่อภูมิปัญญา มาอย่างยาวนานในเขตดินภูเขา อันอุดมไปด้วยแร่ธาตุ
+                    </p>
+
+                    <p>
+                        ด้วยสภาพภูมิประเทศและภูมิอากาศที่เหมาะสม ส่งผลให้ขมิ้นชันในพื้นที่นี้สะสมคุณค่าจากธรรมชาติ ได้อย่างเต็มประสิทธิภาพ
+                    </p>
+
+                    <p>
+                        จนได้รับการยอมรับในระดับสากล และขึ้นทะเบียนเป็นสินค้าสิ่งบ่งชี้ทางภูมิศาสตร์ หรือ GI เพื่อการันตีคุณภาพที่เป็นเอกลักษณ์เฉพาะตัว
+                    </p>
+
+                    <p>
+                        ในด้านภูมิปัญญาการใช้สมุนไพร ขมิ้นชันถูกนำไปใช้ในอาหาร ยาสมุนไพร และผลิตภัณฑ์ดูแลร่างกาย
+                    </p>
+
+                    <p>
+                        ปัจจุบันถูกนำมาแปรรูปเป็นผลิตภัณฑ์หลากชนิด ทั้งยาสมุนไพร อาหารเสริม และเครื่องสำอาง ที่สร้างชื่อเสียงและรายได้สู่ชุมชน
+                    </p>
+
+                    <div class="highlight">
+                        ขมิ้นชันจึงเป็นตัวอย่างของภูมิปัญญา ที่ผสมผสานระหว่างธรรมชาติ การดูแลสุขภาพ และเศรษฐกิจชุมชน
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 05 หมาตักน้ำ ใบจาก
+            ====================== -->
+
+            <article class="craft reveal">
+
+                <div class="craft-image">
+
+                    <img
+                        src="https://library.wu.ac.th/nst_localinfo/wp-content/uploads/sites/11/2025/05/%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%81%E0%B8%99%E0%B9%89%E0%B8%B3.jpg"
+                        alt="หมาตักน้ำ ใบจาก"
+                    >
+
+                    <div class="number">
+                        05
+                    </div>
+
+                </div>
+
+                <div class="craft-content">
+
+                    <h3>
+                        “หมาตักน้ำ ใบจาก”
+                    </h3>
+
+                    <p>
+                        “หมาตักน้ำ ใบจาก” มีประวัติศาสตร์ยาวนาน คู่กับวิถีชีวิตชาวลุ่มน้ำตาปี และชุมชนคลองร้อยสาย สุราษฎร์ธานี
+                    </p>
+
+                    <p>
+                        เกิดจากภูมิปัญญาพื้นบ้าน ที่นำพืชท้องถิ่นอย่าง “ต้นจาก” ซึ่งขึ้นอยู่อย่างหนาแน่นตามริมคลอง มาประยุกต์ใช้ให้เกิดประโยชน์
+                    </p>
+
+                    <p>
+                        ชาวบ้านจะเลือกใช้ยอดใบจากอ่อน นำมาพับจีบไขว้กัน แล้วเย็บตรึงให้แน่นหนา จนกลายเป็นภาชนะสำหรับตักน้ำ
+                    </p>
+
+                    <p>
+                        ในอดีตใช้สำหรับตักน้ำในบ่อ หรือผูกเชือกหย่อนลงไปตักน้ำจากคลอง ขึ้นมาเพื่ออุปโภคบริโภค
+                    </p>
+
+                    <p>
+                        ด้วยคุณสมบัติของใบจากที่มีน้ำหนักเบา ลอยน้ำได้ดี และสามารถตักน้ำได้ในปริมาณมาก โดยไม่รั่วซึมง่าย
+                    </p>
+
+                    <div class="highlight">
+                        ปัจจุบันภูมิปัญญานี้ถูกส่งเสริมเป็นสินค้าเอกลักษณ์ และปรับมาใช้เป็นภาชนะใส่ของว่าง หรือของที่ระลึกสำหรับต้อนรับนักท่องเที่ยว
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUOTE
+    ========================== -->
+
+    <section class="quote-section">
+
+        <div class="quote">
+            “ทุกเส้นใย ทุกลวดลาย และทุกฝีมือ คือเรื่องราวของคนสุราษฎร์ธานี”
+        </div>
+
+        <div class="quote-author">
+            — มรดกภูมิปัญญาท้องถิ่น
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TIMELINE
+    ========================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <small>HERITAGE</small>
+
+                <h2>จากอดีตสู่ปัจจุบัน</h2>
+
+                <p>
+                    หัตถกรรมไม่ได้หยุดอยู่แค่ในอดีต
+                    แต่ยังคงถูกพัฒนาให้เข้ากับวิถีชีวิตร่วมสมัย
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4>
+                        ภูมิปัญญาจากธรรมชาติ
+                    </h4>
+
+                    <p>
+                        ผู้คนในท้องถิ่นนำทรัพยากรธรรมชาติ รอบตัวมาสร้างเครื่องมือเครื่องใช้ เพื่อดำรงชีวิต
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4>
+                        ถ่ายทอดจากรุ่นสู่รุ่น
+                    </h4>
+
+                    <p>
+                        เทคนิคการทอ การจักสาน และการแปรรูปวัสดุถูกถ่ายทอด จากช่างฝีมือรุ่นหนึ่งสู่อีกรุ่นหนึ่ง
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4>
+                        กลายเป็นอัตลักษณ์ท้องถิ่น
+                    </h4>
+
+                    <p>
+                        ผลงานเหล่านี้ค่อย ๆ กลายเป็นสัญลักษณ์ ที่สะท้อนวิถีชีวิตและวัฒนธรรม ของจังหวัดสุราษฎร์ธานี
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4>
+                        สู่การออกแบบร่วมสมัย
+                    </h4>
+
+                    <p>
+                        ภูมิปัญญาดั้งเดิมถูกนำมาประยุกต์ ให้เข้ากับการออกแบบยุคใหม่ และสร้างรายได้ให้แก่ชุมชน
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section class="final-section">
+
+        <h2>
+            ภูมิปัญญาที่ไม่เคยเลือนหาย
+        </h2>
+
+        <p>
+            หัตถกรรมสุราษฎร์ธานีคือหลักฐานของความสัมพันธ์ ระหว่างคนกับธรรมชาติ และเป็นมรดกทางวัฒนธรรม ที่ยังคงส่งต่อคุณค่าให้คนรุ่นใหม่ได้เรียนรู้ และภาคภูมิใจ
+        </p>
+
+        <a href="index.html" class="back-home">
+            ← กลับสู่หน้าหลัก
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Surat Thani Heritage
+        <br>
+        เรื่องราว วิถีชีวิต และภูมิปัญญาแห่งสุราษฎร์ธานี
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+
+        });
+
+
+        const reveals = document.querySelectorAll(".reveal");
+
+        const revealOnScroll = () => {
+
+            reveals.forEach((element) => {
+
+                const windowHeight =
+                    window.innerHeight;
+
+                const elementTop =
+                    element.getBoundingClientRect().top;
+
+                const revealPoint = 120;
+
+                if (elementTop <
+                    windowHeight - revealPoint) {
+
+                    element.classList.add("active");
+
+                }
+
+            });
+
+        };
+
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
+        revealOnScroll();
+
+    </script>
+
+</body>
+</html>

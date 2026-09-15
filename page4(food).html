@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>อาหารพื้นถิ่นสุราษฎร์ธานี</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f3fbfe;
+    color: #16485d;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 72px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255,255,255,0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #d9f2f9;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 600;
+    color: #087da5;
+}
+
+.logo span {
+    color: #25b9df;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #386b7c;
+
+    margin-left: 25px;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #00a5d5;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 130px 25px 120px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #e0f8ff 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+}
+
+.hero small {
+    display: inline-block;
+
+    padding: 7px 20px;
+
+    border-radius: 50px;
+
+    color: #078db7;
+
+    background: rgba(255,255,255,0.8);
+
+    border: 1px solid #bcebf7;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+
+    line-height: 1.1;
+
+    color: #087da5;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #27b9df;
+}
+
+.hero p {
+    font-size: 19px;
+
+    color: #5a7d89;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   BUBBLES
+========================================= */
+
+.bubble {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(54,195,228,0.12);
+
+    animation: float 6s ease-in-out infinite;
+}
+
+.bubble1 {
+    width: 180px;
+    height: 180px;
+
+    left: 7%;
+    top: 25%;
+}
+
+.bubble2 {
+    width: 100px;
+    height: 100px;
+
+    right: 12%;
+    top: 20%;
+
+    animation-delay: 1s;
+}
+
+.bubble3 {
+    width: 50px;
+    height: 50px;
+
+    right: 25%;
+    bottom: 25%;
+
+    animation-delay: 2s;
+}
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+}
+
+
+/* =========================================
+   WAVE
+========================================= */
+
+.wave {
+    position: absolute;
+
+    bottom: -2px;
+    left: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background: #f3fbfe;
+
+    clip-path: polygon(
+        0 45%,
+        10% 60%,
+        20% 48%,
+        30% 65%,
+        40% 50%,
+        50% 63%,
+        60% 47%,
+        70% 65%,
+        80% 50%,
+        90% 62%,
+        100% 45%,
+        100% 100%,
+        0 100%
+    );
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 100px 25px 40px;
+
+    text-align: center;
+}
+
+.section-label {
+    color: #15a8d2;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+}
+
+.intro h2 {
+    font-size: 43px;
+
+    color: #087da5;
+
+    margin: 8px 0 20px;
+}
+
+.intro p {
+    color: #607e88;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   FOOD CONTAINER
+========================================= */
+
+.food-container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   FOOD CARD
+========================================= */
+
+.food-card {
+    background: white;
+
+    margin: 75px 0;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid #dff3f8;
+
+    box-shadow:
+        0 15px 50px rgba(20,140,170,0.10);
+
+    transition: 0.4s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(20,140,170,0.18);
+}
+
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.food-image {
+    width: 100%;
+
+    height: 400px;
+
+    overflow: hidden;
+
+    background: #dff7ff;
+
+    position: relative;
+}
+
+.food-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   FOOD TITLE
+========================================= */
+
+.food-title {
+    padding: 35px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0f8ff,
+            #fafdff
+        );
+
+    border-bottom: 1px solid #d8f2f8;
+}
+
+.number {
+    display: flex;
+
+    width: 48px;
+    height: 48px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #19afd5;
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.food-title h2 {
+    font-size: 34px;
+
+    color: #087da5;
+}
+
+.food-title p {
+    color: #6b8993;
+}
+
+
+/* =========================================
+   FOOD CONTENT
+========================================= */
+
+.food-content {
+    padding: 40px;
+}
+
+.food-content h3 {
+    color: #0795bf;
+
+    font-size: 23px;
+
+    margin: 25px 0 10px;
+}
+
+.food-content p {
+    color: #58727d;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.food-content strong {
+    color: #087da5;
+}
+
+
+/* =========================================
+   HIGHLIGHT BOX
+========================================= */
+
+.highlight {
+    margin-top: 30px;
+
+    padding: 25px 30px;
+
+    background: #eefaff;
+
+    border-left: 5px solid #22b8df;
+
+    border-radius: 15px;
+
+    color: #426d7b;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote {
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: 110px auto;
+
+    padding: 65px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #079bc6,
+            #55d1eb
+        );
+
+    color: white;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(0,166,214,0.20);
+}
+
+.quote h2 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.quote p {
+    font-size: 18px;
+
+    opacity: 0.95;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 100px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #075d78;
+
+    color: white;
+}
+
+footer h2 {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 30px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+
+    color: #075d78;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 570px;
+
+        padding: 130px 25px 100px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .food-image {
+        height: 260px;
+    }
+
+    .food-title {
+        padding: 30px 25px;
+    }
+
+    .food-title h2 {
+        font-size: 28px;
+    }
+
+    .food-content {
+        padding: 25px;
+    }
+
+    .food-content p {
+        font-size: 16px;
+    }
+
+    .quote {
+        padding: 45px 25px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        SURAT<span>THANI</span>
+    </div>
+
+    <nav>
+
+        <a href="#home">หน้าแรก</a>
+
+        <a href="#food">อาหารพื้นถิ่น</a>
+
+        <a href="#about">เกี่ยวกับ</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="home">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+
+
+    <div class="hero-content">
+
+        <small>
+            LOCAL FOOD • SURAT THANI
+        </small>
+
+        <h1>
+            อาหารพื้นถิ่น<br>
+            <span>สุราษฎร์ธานี</span>
+        </h1>
+
+        <p>
+            รสชาติจากภูมิปัญญา วัตถุดิบจากท้องถิ่น
+            และเรื่องราวที่สืบทอดจากรุ่นสู่รุ่น
+        </p>
+
+    </div>
+
+
+    <div class="wave"></div>
+
+</section>
+
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="intro">
+
+    <div class="section-label">
+        TASTE OF SURAT THANI
+    </div>
+
+    <h2>
+        อร่อยจากวิถีชีวิต
+    </h2>
+
+    <p>
+        สุราษฎร์ธานีไม่ได้มีเพียงสถานที่ท่องเที่ยว
+        แต่ยังมีอาหารพื้นถิ่นที่สะท้อนถึงธรรมชาติ
+        วิถีชีวิต และภูมิปัญญาของผู้คนในแต่ละพื้นที่
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOD
+========================================= -->
+
+<main class="food-container" id="food">
+
+
+<!-- =========================================
+     01 ไข่เค็มไชยา
+========================================= -->
+
+<article class="food-card">
+
+    <div class="food-image">
+
+        <img
+            src="https://img.salehere.co.th/p/1200x0/2022/12/10/fvg7xcrpmyte.jpg"
+            alt="ไข่เค็มไชยา"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="food-title">
+
+        <div class="number">
+            01
+        </div>
+
+        <h2>
+            ไข่เค็มไชยา
+        </h2>
+
+        <p>
+            ของฝากขึ้นชื่อจากอำเภอไชยา
+        </p>
+
+    </div>
+
+
+    <div class="food-content">
+
+        <h3>
+            ประวัติความเป็นมา
+        </h3>
+
+        <p>
+            ไข่เค็มไชยามีประวัติความเป็นมาที่ยาวนาน
+            โดยมีเรื่องเล่าว่าเริ่มขึ้นในช่วงปี พ.ศ. 2466
+            เมื่อชาวจีนกวางตุ้งที่มาตั้งรกรากในอำเภอไชยา
+            ได้นำภูมิปัญญาการถนอมอาหารด้วยการพอกไข่เป็ด
+            ด้วยดินจอมปลวกผสมเกลือมาใช้
+        </p>
+
+        <p>
+            ไข่เป็ดที่นำมาทำนั้นเป็นไข่ของ
+            <strong>“เป็ดไชยา”</strong>
+            ซึ่งเป็นเป็ดที่เลี้ยงแบบปล่อยทุ่งในทุ่งนา
+            ทำให้เป็ดได้กินอาหารตามธรรมชาติ เช่น ปู ปลา หอย
+            และเสริมด้วยข้าวเปลือก
+        </p>
+
+        <p>
+            ส่งผลให้ไข่เป็ดมีคุณภาพดี
+            ไข่แดงมีสีแดงสด มีรสชาติมัน
+            และไม่มีกลิ่นคาว
+        </p>
+
+
+        <h3>
+            ภูมิปัญญาที่ทำให้แตกต่าง
+        </h3>
+
+        <p>
+            จุดเด่นของไข่เค็มไชยาคือการใช้ไข่เป็ดไชยา
+            ซึ่งเป็นไข่ที่มีคุณภาพสูงจากเป็ดที่เลี้ยงในพื้นที่
+            ร่วมกับเทคนิคการพอกไข่ด้วยดินจอมปลวก
+            แทนการดองน้ำเกลือแบบทั่วไป
+        </p>
+
+
+        <div class="highlight">
+
+            <strong>
+                จุดเด่น
+            </strong>
+
+            <br>
+
+            ไข่แดงมีสีแดงสวย มีความมัน
+            รสชาติเค็มกำลังดี และมีกลิ่นคาวน้อย
+
+        </div>
+
+
+        <h3>
+            สินค้าขึ้นชื่อของจังหวัด
+        </h3>
+
+        <p>
+            ไข่เค็มไชยากลายเป็นอาหารพื้นเมืองที่โดดเด่น
+            และเป็นของฝากที่มีชื่อเสียงของจังหวัดสุราษฎร์ธานี
+            อีกทั้งได้รับการขึ้นทะเบียนเป็นสินค้าสิ่งบ่งชี้
+            ทางภูมิศาสตร์ หรือ GI
+        </p>
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================================
+     02 หอยนางรม
+========================================= -->
+
+<article class="food-card">
+
+    <div class="food-image">
+
+        <img
+            src="https://media.allonline.7eleven.co.th/pdmain/660628-07-sea-food-siripornfarm.jpg"
+            alt="หอยนางรมสุราษฎร์ธานี"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="food-title">
+
+        <div class="number">
+            02
+        </div>
+
+        <h2>
+            หอยนางรมสุราษฎร์ธานี
+        </h2>
+
+        <p>
+            ความอุดมสมบูรณ์จากชายฝั่งอ่าวไทย
+        </p>
+
+    </div>
+
+
+    <div class="food-content">
+
+        <h3>
+            ธรรมชาติที่สร้างความอร่อย
+        </h3>
+
+        <p>
+            สุราษฎร์ธานีมีพื้นที่ชายฝั่งทะเลอ่าวไทย
+            ที่อุดมสมบูรณ์ รวมถึงมีแม่น้ำตาปีที่ไหลออกสู่ทะเล
+            ทำให้เกิดบริเวณปากอ่าวที่เป็นน้ำกร่อย
+            ซึ่งเป็นแหล่งอาศัยที่เหมาะสมสำหรับหอยนางรม
+        </p>
+
+        <p>
+            หอยนางรมที่นิยมในท้องถิ่นคือ
+            หอยนางรมพันธุ์สุราษฎร์ธานี
+            ซึ่งมีลักษณะเด่นคือขนาดใหญ่และเนื้อแน่น
+        </p>
+
+
+        <h3>
+            ภูมิปัญญาการเพาะเลี้ยง
+        </h3>
+
+        <p>
+            ชาวบ้านในท้องถิ่นได้เรียนรู้วิธีการเพาะเลี้ยง
+            หอยนางรมมาตั้งแต่อดีต โดยอาศัยภูมิปัญญาพื้นบ้าน
+            ด้วยการปักหลักไม้ไผ่เพื่อเป็นที่เกาะของหอยนางรม
+        </p>
+
+
+        <h3>
+            เมนูยอดนิยม
+        </h3>
+
+        <p>
+            หอยนางรมสดเป็นเมนูที่นักท่องเที่ยวนิยมรับประทาน
+            เมื่อมาเยือนสุราษฎร์ธานี โดยมักเสิร์ฟพร้อมเครื่องเคียง
+            เช่น หอมเจียว น้ำจิ้มซีฟู้ด พริกเผา และกระถิน
+        </p>
+
+        <p>
+            นอกจากนี้ยังสามารถนำหอยนางรมไปประกอบอาหาร
+            ได้อีกหลายชนิด เช่น หอยนางรมชุบแป้งทอด
+        </p>
+
+
+        <div class="highlight">
+
+            <strong>
+                เสน่ห์ของหอยนางรมสุราษฎร์ธานี
+            </strong>
+
+            <br>
+
+            วัตถุดิบจากธรรมชาติที่มีสภาพแวดล้อมเหมาะสม
+            ทำให้หอยนางรมมีขนาดใหญ่ เนื้อแน่น
+            และมีรสชาติที่เป็นเอกลักษณ์
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================================
+     03 ผัดไทยไชยา
+========================================= -->
+
+<article class="food-card">
+
+    <div class="food-image">
+
+        <img
+            src="https://image.bangkokbiznews.com/image/kt/media/image/fileupload1/source/161006742926.jpg?1610153725653%3Fx-image-process=style%2Flg-webp"
+            alt="ผัดไทยไชยา"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="food-title">
+
+        <div class="number">
+            03
+        </div>
+
+        <h2>
+            ผัดไทยไชยา
+        </h2>
+
+        <p>
+            อาหารพื้นเมืองที่มีประวัติยาวนานกว่า 100 ปี
+        </p>
+
+    </div>
+
+
+    <div class="food-content">
+
+        <h3>
+            จาก “ผัดหมี่” สู่ผัดไทยไชยา
+        </h3>
+
+        <p>
+            ผัดไทยไชยา หรือเดิมเรียกว่า
+            <strong>“ผัดหมี่”</strong>
+            เป็นอาหารพื้นเมืองของชาวไชยา
+            จังหวัดสุราษฎร์ธานี
+            และเป็นอาหารที่รู้จักแพร่หลายมานานกว่า 100 ปี
+        </p>
+
+        <p>
+            ปัจจุบันน้ำผัดไทยไชยาจากเมืองไชยา
+            ถูกนำไปใช้ในการปรุงผัดไทยในจังหวัดใกล้เคียง
+            เช่น นครศรีธรรมราช ชุมพร ระนอง และสงขลา
+        </p>
+
+
+        <h3>
+            ความแตกต่างจากผัดไทยทั่วไป
+        </h3>
+
+        <p>
+            ผัดไทยไชยามีเอกลักษณ์สำคัญอยู่ที่
+            <strong>“น้ำผัดไทยไชยา”</strong>
+            โดยเวลารับประทานจะนำเส้นหมี่มาผัดกับ
+            น้ำผัดไทยไชยาจนแห้ง
+            แล้วรับประทานขณะร้อนคู่กับผักชนิดต่าง ๆ
+        </p>
+
+
+        <h3>
+            อาหารกับวิถีชีวิตของชุมชน
+        </h3>
+
+        <p>
+            ผัดไทยไชยายังมีความเกี่ยวข้องกับวิถีชีวิต
+            และประเพณีของชุมชน เพราะมักนำไปทำเลี้ยงผู้คน
+            ในงานบวช งานศพ และงานพิธีสำคัญต่าง ๆ
+        </p>
+
+
+        <div class="highlight">
+
+            <strong>
+                มากกว่าอาหาร
+            </strong>
+
+            <br>
+
+            ผัดไทยไชยาเป็นทั้งอาหารพื้นบ้าน
+            และภูมิปัญญาท้องถิ่น
+            ที่สะท้อนวัฒนธรรมการกินของชาวสุราษฎร์ธานี
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================================
+     04 ยำใบไม้
+========================================= -->
+
+<article class="food-card">
+
+    <div class="food-image">
+
+        <img
+            src="https://charmedkohyo.com/assets/img/ci/index/menu/pic-menu-5.jpg"
+            alt="ยำใบไม้ อาหารพื้นถิ่นภาคใต้"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="food-title">
+
+        <div class="number">
+            04
+        </div>
+
+        <h2>
+            ยำใบไม้
+        </h2>
+
+        <p>
+            อาหารพื้นถิ่นจากทรัพยากรธรรมชาติ
+        </p>
+
+    </div>
+
+
+    <div class="food-content">
+
+        <h3>
+            อาหารจากธรรมชาติ
+        </h3>
+
+        <p>
+            ยำใบไม้เป็นอาหารพื้นถิ่นของจังหวัดสุราษฎร์ธานี
+            ที่สะท้อนภูมิปัญญาการนำวัตถุดิบจากธรรมชาติ
+            ในท้องถิ่นมาใช้ประกอบอาหาร
+        </p>
+
+        <p>
+            เมนูนี้พบได้ในกลุ่มพื้นที่ราบลุ่ม
+            และชุมชนในจังหวัดสุราษฎร์ธานี
+        </p>
+
+
+        <h3>
+            จุดเด่นของยำใบไม้
+        </h3>
+
+        <p>
+            จุดเด่นของเมนูคือการนำใบไม้หรือผักพื้นบ้าน
+            ที่สามารถรับประทานได้หลายชนิด
+            มาผสมกับเครื่องปรุงยำ
+        </p>
+
+        <p>
+            ทำให้เกิดรสชาติที่หลากหลาย
+            ทั้งเปรี้ยว เค็ม เผ็ด
+            และมีกลิ่นหอมจากสมุนไพร
+        </p>
+
+
+        <h3>
+            ภูมิปัญญาที่ควรอนุรักษ์
+        </h3>
+
+        <p>
+            ยำใบไม้ไม่ได้เป็นเพียงอาหารสำหรับรับประทาน
+            แต่ยังแสดงถึงการใช้ทรัพยากรธรรมชาติอย่างรู้คุณค่า
+            และการรู้จักนำพืชท้องถิ่นมาประกอบอาหาร
+        </p>
+
+        <p>
+            องค์ความรู้ในการทำอาหารพื้นถิ่นเหล่านี้
+            ได้รับการถ่ายทอดจากคนรุ่นก่อนสู่คนรุ่นหลัง
+            และเป็นส่วนหนึ่งของภูมิปัญญาอาหาร
+            ของจังหวัดสุราษฎร์ธานี
+        </p>
+
+
+        <div class="highlight">
+
+            <strong>
+                อาหารที่ควรรักษาไว้
+            </strong>
+
+            <br>
+
+            ยำใบไม้เป็นอาหารพื้นบ้าน
+            ที่สะท้อนอัตลักษณ์และวัฒนธรรมอาหาร
+            ของชุมชนสุราษฎร์ธานี
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================================
+     05 วายคั่ว
+========================================= -->
+
+<article class="food-card">
+
+    <div class="food-image">
+
+        <img
+            src="https://img.wongnai.com/p/1920x0/2023/05/05/f2496d355c1e489c84b89055921a7361.jpg"
+            alt="วายคั่ว เกาะสมุย"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="food-title">
+
+        <div class="number">
+            05
+        </div>
+
+        <h2>
+            วายคั่ว
+        </h2>
+
+        <p>
+            อาหารหากินยากจากเกาะสมุย
+        </p>
+
+    </div>
+
+
+    <div class="food-content">
+
+        <h3>
+            อาหารที่สะท้อนอัตลักษณ์เกาะสมุย
+        </h3>
+
+        <p>
+            วายคั่วเป็นเมนูที่หารับประทานได้ยาก
+            และถือเป็นอาหารที่แสดงออกถึงอัตลักษณ์
+            ของเกาะสมุยอย่างชัดเจน
+        </p>
+
+        <p>
+            ถือเป็นอาหารพื้นเพของคนเกาะสมุย
+            ที่สืบทอดมาตั้งแต่รุ่นปู่ย่าตายาย
+            จนถึงปัจจุบัน
+        </p>
+
+
+        <h3>
+            “วาย” คืออะไร?
+        </h3>
+
+        <p>
+            คำว่า <strong>“วาย”</strong>
+            เป็นภาษาหมุยหรือภาษาสมุย
+            หมายถึงปลาหมึกสาย
+            ซึ่งเป็นสัตว์ทะเลตระกูลหมึกอีกชนิดหนึ่ง
+            ที่มักวางไข่ตามตลิ่งบริเวณที่มีโขดหิน
+        </p>
+
+
+        <h3>
+            วัตถุดิบจากเกาะ
+        </h3>
+
+        <p>
+            คนสมุยนำปลาหมึกสายที่มีอยู่มากในท้องทะเล
+            แถบนั้นมาปรุงอาหาร
+            โดยนำมาต้มและคั่วกับกะทิ
+            ซึ่งเป็นวัตถุดิบที่หาได้มากจากมะพร้าว
+            บนเกาะสมุย
+        </p>
+
+        <p>
+            วายคั่วเป็นแกงคั่วสีขาว
+            มีความหอมละมุน กรุ่นกลิ่นกะปิ
+            และสมุนไพร
+        </p>
+
+
+        <div class="highlight">
+
+            <strong>
+                ทำไมต้องเป็น “วาย”?
+            </strong>
+
+            <br>
+
+            การใช้ปลาหมึกสายเป็นวัตถุดิบสำคัญ
+            เพราะให้รสสัมผัสที่แตกต่างจากปลาหมึกชนิดอื่น
+            จึงเกิดเป็นเอกลักษณ์เฉพาะของเมนู
+            ที่เรียกว่า “วายคั่ว”
+
+        </div>
+
+    </div>
+
+</article>
+
+
+</main>
+
+
+
+<!-- =========================================
+     QUOTE
+========================================= -->
+
+<section class="quote" id="about">
+
+    <h2>
+        “รสชาติของท้องถิ่น คือเรื่องราวของผู้คน”
+    </h2>
+
+    <p>
+        อาหารพื้นถิ่นสุราษฎร์ธานีสะท้อนทั้งธรรมชาติ
+        วิถีชีวิต ภูมิปัญญา และวัฒนธรรม
+        ที่สืบทอดต่อกันมาจากรุ่นสู่รุ่น
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <h2>
+        สุราษฎร์ธานี
+    </h2>
+
+    <p>
+        เมืองแห่งธรรมชาติ วัฒนธรรม และอาหารพื้นถิ่น
+    </p>
+
+
+    <a
+        href="index.html"
+        class="back-btn"
+    >
+        ← กลับหน้าหลัก
+    </a>
+
+</footer>
+
+
+</body>
+</html>
