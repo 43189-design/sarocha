@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติศาสตร์สุราษฎร์ธานี | Suratthani</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", "Tahoma", sans-serif;
+            background: #f5fbfd;
+            color: #174a5c;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: relative;
+            height: 420px;
+
+            /* รูปพระบรมธาตุไชยา */
+            background-image:
+                linear-gradient(
+                    rgba(0, 70, 85, 0.48),
+                    rgba(0, 140, 160, 0.30)
+                ),
+                url("https://upload.wikimedia.org/wikipedia/commons/3/34/Phra_Borom_That_Chaiya.jpg");
+
+            background-size: cover;
+            background-position: center 45%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+
+            color: white;
+
+            padding: 30px;
+            max-width: 850px;
+        }
+
+
+        .header-content .small-title {
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+
+        .header-content h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+        }
+
+
+        .header-content p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: white;
+            padding: 15px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(0, 100, 130, 0.08);
+
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            color: #008ca8;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: #356b7a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            background: #dff6fa;
+            color: #007f98;
+        }
+
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .intro {
+            max-width: 1000px;
+            margin: 70px auto 40px;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+
+        .section-label {
+            color: #00a0b8;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+
+        .intro h2 {
+            font-size: 34px;
+            color: #126177;
+            margin: 8px 0 20px;
+        }
+
+
+        .intro p {
+            color: #557783;
+            font-size: 17px;
+        }
+
+
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 25px;
+            position: relative;
+        }
+
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+
+            left: 50%;
+            top: 0;
+            bottom: 0;
+
+            width: 3px;
+
+            background: linear-gradient(
+                #bcecf3,
+                #43bdd0,
+                #bcecf3
+            );
+
+            transform: translateX(-50%);
+        }
+
+
+        .timeline-item {
+            width: 50%;
+            padding: 20px 40px;
+
+            position: relative;
+        }
+
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+
+        .timeline-dot {
+            position: absolute;
+
+            width: 18px;
+            height: 18px;
+
+            background: #00a4bd;
+
+            border: 4px solid white;
+            border-radius: 50%;
+
+            top: 30px;
+
+            box-shadow: 0 0 0 3px #bcecf3;
+        }
+
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -9px;
+        }
+
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -9px;
+        }
+
+
+        .timeline-card {
+            background: white;
+
+            padding: 25px 28px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 30px rgba(0, 100, 130, 0.08);
+
+            border: 1px solid #e0f4f7;
+
+            transition: 0.3s;
+        }
+
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(0, 130, 160, 0.14);
+        }
+
+
+        .timeline-card .year {
+            color: #00a0b8;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+
+        .timeline-card h3 {
+            color: #126177;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+
+        .timeline-card p {
+            color: #587681;
+            font-size: 15px;
+        }
+
+
+
+        /* =========================
+           HIGHLIGHT BOX
+        ========================= */
+
+        .highlight {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 25px;
+        }
+
+
+        .highlight-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #dff8fc,
+                    #f8feff
+                );
+
+            border-radius: 25px;
+
+            padding: 45px;
+
+            text-align: center;
+
+            border: 1px solid #c7edf3;
+        }
+
+
+        .highlight-box h2 {
+            color: #087c96;
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+
+        .highlight-box p {
+            max-width: 800px;
+            margin: auto;
+            color: #527581;
+        }
+
+
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+            max-width: 850px;
+            margin: 70px auto;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            color: #27758a;
+        }
+
+
+        .quote span {
+            display: block;
+            font-size: 55px;
+            color: #7dd4df;
+            line-height: 0.7;
+        }
+
+
+        .quote p {
+            font-size: 23px;
+            font-weight: 500;
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 80px;
+
+            background: #0b6478;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+
+        footer h3 {
+            margin-bottom: 8px;
+        }
+
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                height: 350px;
+            }
+
+
+            .header-content h1 {
+                font-size: 36px;
+            }
+
+
+            .header-content p {
+                font-size: 16px;
+            }
+
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+
+            .timeline::before {
+                left: 15px;
+            }
+
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                left: 0;
+                text-align: left;
+                padding-left: 45px;
+                padding-right: 0;
+            }
+
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 6px;
+                right: auto;
+            }
+
+
+            .highlight-box {
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            SURAT THANI
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">หน้าหลัก</a>
+
+            <a href="history.html">ประวัติศาสตร์</a>
+
+            <a href="#">สถานที่ท่องเที่ยว</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="small-title">
+                HISTORY OF SURATTHANI
+            </div>
+
+            <h1>
+                ประวัติศาสตร์สุราษฎร์ธานี
+            </h1>
+
+            <p>
+                เรื่องราวแห่งเมืองเก่า ร่องรอยศรีวิชัย
+                และการก่อกำเนิดเมืองสุราษฎร์ธานี
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================= -->
+
+    <section class="intro">
+
+        <div class="section-label">
+            A JOURNEY THROUGH TIME
+        </div>
+
+        <h2>
+            จากเมืองโบราณ สู่สุราษฎร์ธานี
+        </h2>
+
+        <p>
+            สุราษฎร์ธานีเป็นพื้นที่ที่มีความสำคัญทางประวัติศาสตร์
+            ของภาคใต้มาอย่างยาวนาน เป็นที่ตั้งของเมืองโบราณ
+            และเคยเป็นศูนย์กลางสำคัญของอาณาจักรศรีวิชัย
+            มีหลักฐานทางโบราณคดีและประวัติศาสตร์
+            ที่สะท้อนถึงการตั้งถิ่นฐาน การค้าขาย
+            และความรุ่งเรืองของชุมชนในอดีต
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         TIMELINE
+    ========================= -->
+
+    <section class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    หลังพุทธศตวรรษที่ 13
+                </div>
+
+                <h3>
+                    ยุคศรีวิชัย
+                </h3>
+
+                <p>
+                    พื้นที่อ่าวบ้านดอนมีความเจริญรุ่งเรือง
+                    และพัฒนาขึ้นเป็นศูนย์กลางสำคัญของ
+                    อาณาจักรศรีวิชัย มีหลักฐานทางประวัติศาสตร์
+                    ที่แสดงให้เห็นถึงการตั้งรกรากและเส้นทางการค้า
+                    ในอดีต
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    ยุคเมืองนครศรีธรรมราช
+                </div>
+
+                <h3>
+                    เมืองไชยา
+                </h3>
+
+                <p>
+                    เมื่ออาณาจักรตามพรลิงก์หรือเมืองนครศรีธรรมราช
+                    มีความรุ่งเรือง เมืองไชยาถูกเชื่อว่าเป็นหนึ่งใน
+                    เมืองสิบสองนักษัตรของนครศรีธรรมราช
+                    โดยมีชื่อว่า
+                    “เมืองบันไทยสมอ”
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    ชุมชนลุ่มแม่น้ำตาปี
+                </div>
+
+                <h3>
+                    เวียงสระ • คีรีรัฐนิคม • ท่าทอง
+                </h3>
+
+                <p>
+                    ในบริเวณลุ่มแม่น้ำตาปีเกิดเมืองสำคัญหลายแห่ง
+                    ได้แก่ เมืองเวียงสระ เมืองคีรีรัฐนิคม
+                    และเมืองท่าทอง ซึ่งล้วนมีบทบาทต่อพัฒนาการ
+                    ของชุมชนในพื้นที่สุราษฎร์ธานี
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    รัชกาลที่ 3
+                </div>
+
+                <h3>
+                    อู่เรืออ่าวบ้านดอน
+                </h3>
+
+                <p>
+                    พระบาทสมเด็จพระนั่งเกล้าเจ้าอยู่หัว
+                    โปรดเกล้าฯ ให้ก่อตั้งอู่เรือพระที่นั่ง
+                    และเรือรบเพื่อใช้ในราชการ
+                    ณ บริเวณอ่าวบ้านดอน
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    รัชกาลที่ 4
+                </div>
+
+                <h3>
+                    กำเนิดเมืองกาญจนดิษฐ์
+                </h3>
+
+                <p>
+                    พระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว
+                    โปรดเกล้าฯ ให้ย้ายที่ตั้งเมืองท่าทอง
+                    มายังบริเวณอ่าวบ้านดอน และยกฐานะเป็นเมืองจัตวา
+                    ขึ้นตรงต่อกรุงเทพมหานคร
+                    พร้อมพระราชทานนามว่า
+                    “เมืองกาญจนดิษฐ์”
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    รัชกาลที่ 5
+                </div>
+
+                <h3>
+                    การรวมเมือง
+                </h3>
+
+                <p>
+                    มีการรวมเมืองกาญจนดิษฐ์
+                    เมืองคีรีรัฐนิคม และเมืองไชยา
+                    เป็นเมืองเดียวกัน เรียกว่า
+                    “เมืองไชยา”
+                    ภายใต้สังกัดมณฑลชุมพร
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    รัชกาลที่ 6
+                </div>
+
+                <h3>
+                    กำเนิดชื่อ “สุราษฎร์ธานี”
+                </h3>
+
+                <p>
+                    เมื่อเมืองขยายตัว ได้มีการสร้างเมืองใหม่
+                    บริเวณอ่าวบ้านดอน และเกิดความสับสนในการเรียกชื่อ
+                    เมืองเก่าและเมืองใหม่ พระบาทสมเด็จพระมงกุฎเกล้า
+                    เจ้าอยู่หัวจึงพระราชทานนามเมืองใหม่ว่า
+                    “สุราษฎร์ธานี”
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="year">
+                    การพระราชทานชื่อแม่น้ำ
+                </div>
+
+                <h3>
+                    “แม่น้ำตาปี”
+                </h3>
+
+                <p>
+                    ในคราวเดียวกัน พระบาทสมเด็จพระมงกุฎเกล้าเจ้าอยู่หัว
+                    ได้พระราชทานนามแม่น้ำตาปี โดยได้รับแรงบันดาลใจ
+                    จากชื่อเมืองและแม่น้ำในประเทศอินเดีย
+                    ที่มีแม่น้ำตาปติมุ่งลงสู่ทะเล
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         HIGHLIGHT
+    ========================= -->
+
+    <section class="highlight">
+
+        <div class="highlight-box">
+
+            <h2>
+                เมืองที่เติบโตจากสายน้ำและการค้า
+            </h2>
+
+            <p>
+                ประวัติศาสตร์ของสุราษฎร์ธานีไม่ได้เกิดขึ้น
+                จากเมืองใดเมืองหนึ่งเพียงแห่งเดียว แต่เป็นเรื่องราว
+                ของเมืองโบราณหลายแห่งที่เติบโตขึ้นตามลุ่มน้ำ
+                และเส้นทางการค้า ก่อนจะพัฒนามาสู่เมืองสุราษฎร์ธานี
+                ในปัจจุบัน
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUOTE
+    ========================= -->
+
+    <section class="quote">
+
+        <span>“</span>
+
+        <p>
+            จากร่องรอยแห่งอดีต
+            สู่เรื่องราวของเมืองในวันนี้
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            SURAT THANI TRAVEL
+        </h3>
+
+        <p>
+            เว็บไซต์แนะนำการท่องเที่ยวจังหวัดสุราษฎร์ธานี
+        </p>
+
+        <p>
+            © 2026 Surat Thani Travel
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
