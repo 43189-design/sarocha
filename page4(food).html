@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -13,10 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================
-   RESET
-========================================= */
 
 * {
     margin: 0;
@@ -35,19 +32,14 @@ body {
     line-height: 1.8;
 }
 
-
-/* =========================================
-   NAVBAR
-========================================= */
+/* NAVBAR */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 72px;
-
     z-index: 1000;
 
     display: flex;
@@ -57,9 +49,7 @@ body {
     padding: 0 7%;
 
     background: rgba(255,255,255,0.88);
-
     backdrop-filter: blur(15px);
-
     border-bottom: 1px solid #d9f2f9;
 }
 
@@ -76,9 +66,7 @@ body {
 .navbar nav a {
     text-decoration: none;
     color: #386b7c;
-
     margin-left: 25px;
-
     transition: 0.3s;
 }
 
@@ -86,14 +74,10 @@ body {
     color: #00a5d5;
 }
 
-
-/* =========================================
-   HERO
-========================================= */
+/* HERO */
 
 .hero {
     min-height: 650px;
-
     position: relative;
 
     display: flex;
@@ -103,7 +87,6 @@ body {
     text-align: center;
 
     padding: 130px 25px 120px;
-
     overflow: hidden;
 
     background:
@@ -124,25 +107,19 @@ body {
     display: inline-block;
 
     padding: 7px 20px;
-
     border-radius: 50px;
 
     color: #078db7;
-
     background: rgba(255,255,255,0.8);
 
     border: 1px solid #bcebf7;
-
     margin-bottom: 20px;
 }
 
 .hero h1 {
     font-size: clamp(45px, 8vw, 85px);
-
     line-height: 1.1;
-
     color: #087da5;
-
     margin-bottom: 25px;
 }
 
@@ -152,33 +129,23 @@ body {
 
 .hero p {
     font-size: 19px;
-
     color: #5a7d89;
-
     max-width: 700px;
-
     margin: auto;
 }
 
-
-/* =========================================
-   BUBBLES
-========================================= */
+/* BUBBLES */
 
 .bubble {
     position: absolute;
-
     border-radius: 50%;
-
     background: rgba(54,195,228,0.12);
-
     animation: float 6s ease-in-out infinite;
 }
 
 .bubble1 {
     width: 180px;
     height: 180px;
-
     left: 7%;
     top: 25%;
 }
@@ -186,25 +153,20 @@ body {
 .bubble2 {
     width: 100px;
     height: 100px;
-
     right: 12%;
     top: 20%;
-
     animation-delay: 1s;
 }
 
 .bubble3 {
     width: 50px;
     height: 50px;
-
     right: 25%;
     bottom: 25%;
-
     animation-delay: 2s;
 }
 
 @keyframes float {
-
     0%,100% {
         transform: translateY(0);
     }
@@ -212,13 +174,9 @@ body {
     50% {
         transform: translateY(-25px);
     }
-
 }
 
-
-/* =========================================
-   WAVE
-========================================= */
+/* WAVE */
 
 .wave {
     position: absolute;
@@ -248,60 +206,41 @@ body {
     );
 }
 
-
-/* =========================================
-   INTRO
-========================================= */
+/* INTRO */
 
 .intro {
     max-width: 950px;
-
     margin: auto;
-
     padding: 100px 25px 40px;
-
     text-align: center;
 }
 
 .section-label {
     color: #15a8d2;
-
     font-size: 14px;
-
     letter-spacing: 3px;
 }
 
 .intro h2 {
     font-size: 43px;
-
     color: #087da5;
-
     margin: 8px 0 20px;
 }
 
 .intro p {
     color: #607e88;
-
     font-size: 18px;
 }
 
-
-/* =========================================
-   FOOD CONTAINER
-========================================= */
+/* FOOD CONTAINER */
 
 .food-container {
     width: 90%;
-
     max-width: 1100px;
-
     margin: auto;
 }
 
-
-/* =========================================
-   FOOD CARD
-========================================= */
+/* FOOD CARD */
 
 .food-card {
     background: white;
@@ -309,7 +248,6 @@ body {
     margin: 75px 0;
 
     border-radius: 30px;
-
     overflow: hidden;
 
     border: 1px solid #dff3f8;
@@ -327,30 +265,22 @@ body {
         0 25px 60px rgba(20,140,170,0.18);
 }
 
-
-/* =========================================
-   FOOD IMAGE
-========================================= */
+/* FOOD IMAGE */
 
 .food-image {
     width: 100%;
-
     height: 400px;
-
     overflow: hidden;
 
     background: #dff7ff;
-
     position: relative;
 }
 
 .food-image img {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
-
     display: block;
 
     transition: transform 0.6s ease;
@@ -360,10 +290,7 @@ body {
     transform: scale(1.06);
 }
 
-
-/* =========================================
-   FOOD TITLE
-========================================= */
+/* FOOD TITLE */
 
 .food-title {
     padding: 35px 40px;
@@ -390,7 +317,6 @@ body {
     border-radius: 50%;
 
     background: #19afd5;
-
     color: white;
 
     font-size: 20px;
@@ -400,7 +326,6 @@ body {
 
 .food-title h2 {
     font-size: 34px;
-
     color: #087da5;
 }
 
@@ -408,10 +333,7 @@ body {
     color: #6b8993;
 }
 
-
-/* =========================================
-   FOOD CONTENT
-========================================= */
+/* FOOD CONTENT */
 
 .food-content {
     padding: 40px;
@@ -419,17 +341,13 @@ body {
 
 .food-content h3 {
     color: #0795bf;
-
     font-size: 23px;
-
     margin: 25px 0 10px;
 }
 
 .food-content p {
     color: #58727d;
-
     font-size: 17px;
-
     margin-bottom: 15px;
 }
 
@@ -437,10 +355,7 @@ body {
     color: #087da5;
 }
 
-
-/* =========================================
-   HIGHLIGHT BOX
-========================================= */
+/* HIGHLIGHT */
 
 .highlight {
     margin-top: 30px;
@@ -456,14 +371,10 @@ body {
     color: #426d7b;
 }
 
-
-/* =========================================
-   QUOTE
-========================================= */
+/* QUOTE */
 
 .quote {
     width: 90%;
-
     max-width: 950px;
 
     margin: 110px auto;
@@ -489,20 +400,15 @@ body {
 
 .quote h2 {
     font-size: 35px;
-
     margin-bottom: 15px;
 }
 
 .quote p {
     font-size: 18px;
-
     opacity: 0.95;
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 footer {
     margin-top: 100px;
@@ -518,7 +424,6 @@ footer {
 
 footer h2 {
     font-size: 28px;
-
     margin-bottom: 10px;
 }
 
@@ -546,14 +451,10 @@ footer p {
 
 .back-btn:hover {
     background: white;
-
     color: #075d78;
 }
 
-
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
 
@@ -567,7 +468,6 @@ footer p {
 
     .hero {
         min-height: 570px;
-
         padding: 130px 25px 100px;
     }
 
@@ -602,19 +502,14 @@ footer p {
     .quote {
         padding: 45px 25px;
     }
-
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================================
-     NAVBAR
-========================================= -->
+<!-- NAVBAR -->
 
 <header class="navbar">
 
@@ -624,7 +519,7 @@ footer p {
 
     <nav>
 
-        <a href="#home">หน้าแรก</a>
+        <a href="index.html">หน้าแรก</a>
 
         <a href="#food">อาหารพื้นถิ่น</a>
 
@@ -635,17 +530,13 @@ footer p {
 </header>
 
 
-
-<!-- =========================================
-     HERO
-========================================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
     <div class="bubble bubble1"></div>
     <div class="bubble bubble2"></div>
     <div class="bubble bubble3"></div>
-
 
     <div class="hero-content">
 
@@ -665,16 +556,12 @@ footer p {
 
     </div>
 
-
     <div class="wave"></div>
 
 </section>
 
 
-
-<!-- =========================================
-     INTRO
-========================================= -->
+<!-- INTRO -->
 
 <section class="intro">
 
@@ -695,17 +582,12 @@ footer p {
 </section>
 
 
-
-<!-- =========================================
-     FOOD
-========================================= -->
+<!-- FOOD -->
 
 <main class="food-container" id="food">
 
 
-<!-- =========================================
-     01 ไข่เค็มไชยา
-========================================= -->
+<!-- 01 ไข่เค็มไชยา -->
 
 <article class="food-card">
 
@@ -719,29 +601,19 @@ footer p {
 
     </div>
 
-
     <div class="food-title">
 
-        <div class="number">
-            01
-        </div>
+        <div class="number">01</div>
 
-        <h2>
-            ไข่เค็มไชยา
-        </h2>
+        <h2>ไข่เค็มไชยา</h2>
 
-        <p>
-            ของฝากขึ้นชื่อจากอำเภอไชยา
-        </p>
+        <p>ของฝากขึ้นชื่อจากอำเภอไชยา</p>
 
     </div>
 
-
     <div class="food-content">
 
-        <h3>
-            ประวัติความเป็นมา
-        </h3>
+        <h3>ประวัติความเป็นมา</h3>
 
         <p>
             ไข่เค็มไชยามีประวัติความเป็นมาที่ยาวนาน
@@ -765,10 +637,7 @@ footer p {
             และไม่มีกลิ่นคาว
         </p>
 
-
-        <h3>
-            ภูมิปัญญาที่ทำให้แตกต่าง
-        </h3>
+        <h3>ภูมิปัญญาที่ทำให้แตกต่าง</h3>
 
         <p>
             จุดเด่นของไข่เค็มไชยาคือการใช้ไข่เป็ดไชยา
@@ -777,12 +646,9 @@ footer p {
             แทนการดองน้ำเกลือแบบทั่วไป
         </p>
 
-
         <div class="highlight">
 
-            <strong>
-                จุดเด่น
-            </strong>
+            <strong>จุดเด่น</strong>
 
             <br>
 
@@ -791,10 +657,7 @@ footer p {
 
         </div>
 
-
-        <h3>
-            สินค้าขึ้นชื่อของจังหวัด
-        </h3>
+        <h3>สินค้าขึ้นชื่อของจังหวัด</h3>
 
         <p>
             ไข่เค็มไชยากลายเป็นอาหารพื้นเมืองที่โดดเด่น
@@ -808,10 +671,7 @@ footer p {
 </article>
 
 
-
-<!-- =========================================
-     02 หอยนางรม
-========================================= -->
+<!-- 02 หอยนางรม -->
 
 <article class="food-card">
 
@@ -825,29 +685,19 @@ footer p {
 
     </div>
 
-
     <div class="food-title">
 
-        <div class="number">
-            02
-        </div>
+        <div class="number">02</div>
 
-        <h2>
-            หอยนางรมสุราษฎร์ธานี
-        </h2>
+        <h2>หอยนางรมสุราษฎร์ธานี</h2>
 
-        <p>
-            ความอุดมสมบูรณ์จากชายฝั่งอ่าวไทย
-        </p>
+        <p>ความอุดมสมบูรณ์จากชายฝั่งอ่าวไทย</p>
 
     </div>
 
-
     <div class="food-content">
 
-        <h3>
-            ธรรมชาติที่สร้างความอร่อย
-        </h3>
+        <h3>ธรรมชาติที่สร้างความอร่อย</h3>
 
         <p>
             สุราษฎร์ธานีมีพื้นที่ชายฝั่งทะเลอ่าวไทย
@@ -862,10 +712,7 @@ footer p {
             ซึ่งมีลักษณะเด่นคือขนาดใหญ่และเนื้อแน่น
         </p>
 
-
-        <h3>
-            ภูมิปัญญาการเพาะเลี้ยง
-        </h3>
+        <h3>ภูมิปัญญาการเพาะเลี้ยง</h3>
 
         <p>
             ชาวบ้านในท้องถิ่นได้เรียนรู้วิธีการเพาะเลี้ยง
@@ -873,10 +720,7 @@ footer p {
             ด้วยการปักหลักไม้ไผ่เพื่อเป็นที่เกาะของหอยนางรม
         </p>
 
-
-        <h3>
-            เมนูยอดนิยม
-        </h3>
+        <h3>เมนูยอดนิยม</h3>
 
         <p>
             หอยนางรมสดเป็นเมนูที่นักท่องเที่ยวนิยมรับประทาน
@@ -889,12 +733,9 @@ footer p {
             ได้อีกหลายชนิด เช่น หอยนางรมชุบแป้งทอด
         </p>
 
-
         <div class="highlight">
 
-            <strong>
-                เสน่ห์ของหอยนางรมสุราษฎร์ธานี
-            </strong>
+            <strong>เสน่ห์ของหอยนางรมสุราษฎร์ธานี</strong>
 
             <br>
 
@@ -909,10 +750,7 @@ footer p {
 </article>
 
 
-
-<!-- =========================================
-     03 ผัดไทยไชยา
-========================================= -->
+<!-- 03 ผัดไทยไชยา -->
 
 <article class="food-card">
 
@@ -926,29 +764,19 @@ footer p {
 
     </div>
 
-
     <div class="food-title">
 
-        <div class="number">
-            03
-        </div>
+        <div class="number">03</div>
 
-        <h2>
-            ผัดไทยไชยา
-        </h2>
+        <h2>ผัดไทยไชยา</h2>
 
-        <p>
-            อาหารพื้นเมืองที่มีประวัติยาวนานกว่า 100 ปี
-        </p>
+        <p>อาหารพื้นเมืองที่มีประวัติยาวนานกว่า 100 ปี</p>
 
     </div>
 
-
     <div class="food-content">
 
-        <h3>
-            จาก “ผัดหมี่” สู่ผัดไทยไชยา
-        </h3>
+        <h3>จาก “ผัดหมี่” สู่ผัดไทยไชยา</h3>
 
         <p>
             ผัดไทยไชยา หรือเดิมเรียกว่า
@@ -964,10 +792,7 @@ footer p {
             เช่น นครศรีธรรมราช ชุมพร ระนอง และสงขลา
         </p>
 
-
-        <h3>
-            ความแตกต่างจากผัดไทยทั่วไป
-        </h3>
+        <h3>ความแตกต่างจากผัดไทยทั่วไป</h3>
 
         <p>
             ผัดไทยไชยามีเอกลักษณ์สำคัญอยู่ที่
@@ -977,10 +802,7 @@ footer p {
             แล้วรับประทานขณะร้อนคู่กับผักชนิดต่าง ๆ
         </p>
 
-
-        <h3>
-            อาหารกับวิถีชีวิตของชุมชน
-        </h3>
+        <h3>อาหารกับวิถีชีวิตของชุมชน</h3>
 
         <p>
             ผัดไทยไชยายังมีความเกี่ยวข้องกับวิถีชีวิต
@@ -988,12 +810,9 @@ footer p {
             ในงานบวช งานศพ และงานพิธีสำคัญต่าง ๆ
         </p>
 
-
         <div class="highlight">
 
-            <strong>
-                มากกว่าอาหาร
-            </strong>
+            <strong>มากกว่าอาหาร</strong>
 
             <br>
 
@@ -1008,10 +827,7 @@ footer p {
 </article>
 
 
-
-<!-- =========================================
-     04 ยำใบไม้
-========================================= -->
+<!-- 04 ยำใบไม้ -->
 
 <article class="food-card">
 
@@ -1025,29 +841,19 @@ footer p {
 
     </div>
 
-
     <div class="food-title">
 
-        <div class="number">
-            04
-        </div>
+        <div class="number">04</div>
 
-        <h2>
-            ยำใบไม้
-        </h2>
+        <h2>ยำใบไม้</h2>
 
-        <p>
-            อาหารพื้นถิ่นจากทรัพยากรธรรมชาติ
-        </p>
+        <p>อาหารพื้นถิ่นจากทรัพยากรธรรมชาติ</p>
 
     </div>
 
-
     <div class="food-content">
 
-        <h3>
-            อาหารจากธรรมชาติ
-        </h3>
+        <h3>อาหารจากธรรมชาติ</h3>
 
         <p>
             ยำใบไม้เป็นอาหารพื้นถิ่นของจังหวัดสุราษฎร์ธานี
@@ -1060,10 +866,7 @@ footer p {
             และชุมชนในจังหวัดสุราษฎร์ธานี
         </p>
 
-
-        <h3>
-            จุดเด่นของยำใบไม้
-        </h3>
+        <h3>จุดเด่นของยำใบไม้</h3>
 
         <p>
             จุดเด่นของเมนูคือการนำใบไม้หรือผักพื้นบ้าน
@@ -1077,10 +880,7 @@ footer p {
             และมีกลิ่นหอมจากสมุนไพร
         </p>
 
-
-        <h3>
-            ภูมิปัญญาที่ควรอนุรักษ์
-        </h3>
+        <h3>ภูมิปัญญาที่ควรอนุรักษ์</h3>
 
         <p>
             ยำใบไม้ไม่ได้เป็นเพียงอาหารสำหรับรับประทาน
@@ -1095,12 +895,9 @@ footer p {
             ของจังหวัดสุราษฎร์ธานี
         </p>
 
-
         <div class="highlight">
 
-            <strong>
-                อาหารที่ควรรักษาไว้
-            </strong>
+            <strong>อาหารที่ควรรักษาไว้</strong>
 
             <br>
 
@@ -1115,10 +912,7 @@ footer p {
 </article>
 
 
-
-<!-- =========================================
-     05 วายคั่ว
-========================================= -->
+<!-- 05 วายคั่ว -->
 
 <article class="food-card">
 
@@ -1132,29 +926,19 @@ footer p {
 
     </div>
 
-
     <div class="food-title">
 
-        <div class="number">
-            05
-        </div>
+        <div class="number">05</div>
 
-        <h2>
-            วายคั่ว
-        </h2>
+        <h2>วายคั่ว</h2>
 
-        <p>
-            อาหารหากินยากจากเกาะสมุย
-        </p>
+        <p>อาหารหากินยากจากเกาะสมุย</p>
 
     </div>
 
-
     <div class="food-content">
 
-        <h3>
-            อาหารที่สะท้อนอัตลักษณ์เกาะสมุย
-        </h3>
+        <h3>อาหารที่สะท้อนอัตลักษณ์เกาะสมุย</h3>
 
         <p>
             วายคั่วเป็นเมนูที่หารับประทานได้ยาก
@@ -1168,10 +952,7 @@ footer p {
             จนถึงปัจจุบัน
         </p>
 
-
-        <h3>
-            “วาย” คืออะไร?
-        </h3>
+        <h3>“วาย” คืออะไร?</h3>
 
         <p>
             คำว่า <strong>“วาย”</strong>
@@ -1181,10 +962,7 @@ footer p {
             ที่มักวางไข่ตามตลิ่งบริเวณที่มีโขดหิน
         </p>
 
-
-        <h3>
-            วัตถุดิบจากเกาะ
-        </h3>
+        <h3>วัตถุดิบจากเกาะ</h3>
 
         <p>
             คนสมุยนำปลาหมึกสายที่มีอยู่มากในท้องทะเล
@@ -1200,12 +978,9 @@ footer p {
             และสมุนไพร
         </p>
 
-
         <div class="highlight">
 
-            <strong>
-                ทำไมต้องเป็น “วาย”?
-            </strong>
+            <strong>ทำไมต้องเป็น “วาย”?</strong>
 
             <br>
 
@@ -1224,10 +999,7 @@ footer p {
 </main>
 
 
-
-<!-- =========================================
-     QUOTE
-========================================= -->
+<!-- QUOTE -->
 
 <section class="quote" id="about">
 
@@ -1244,10 +1016,7 @@ footer p {
 </section>
 
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1259,9 +1028,10 @@ footer p {
         เมืองแห่งธรรมชาติ วัฒนธรรม และอาหารพื้นถิ่น
     </p>
 
+    <!-- ปุ่มกลับหน้าแรก -->
 
     <a
-        href="index.html"
+        href="https://43189-design.github.io/sarocha/"
         class="back-btn"
     >
         ← กลับหน้าหลัก
@@ -1271,4 +1041,6 @@ footer p {
 
 
 </body>
-</html>
+</ht
+ml>
+```
