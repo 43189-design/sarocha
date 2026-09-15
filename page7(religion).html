@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ความเชื่อและศาสนา | สุราษฎร์ธานี</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: #f4fbfd;
+            color: #173b4d;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 390px;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(0, 105, 135, 0.55),
+                    rgba(0, 155, 180, 0.32)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Buddhist%20temple%20in%20Bangkok.jpg");
+
+            background-size: cover;
+            background-position: center 55%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+        /* เบลอน้อยลง */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+
+            background: rgba(0, 110, 140, 0.08);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            color: white;
+
+            padding: 25px;
+        }
+
+        .hero-content .small-title {
+            font-size: 16px;
+            letter-spacing: 3px;
+
+            margin-bottom: 8px;
+
+            opacity: 0.9;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            text-shadow:
+                0 3px 10px rgba(0,0,0,0.25);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            font-weight: 300;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        .nav {
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(255,255,255,0.94);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 3px 15px rgba(0,80,100,0.08);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 13px 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+
+            color: #17657c;
+
+            padding: 8px 18px;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background: #dff6fa;
+            color: #007e9f;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================== */
+
+        .intro {
+            max-width: 900px;
+
+            margin: 70px auto 50px;
+
+            padding: 0 25px;
+
+            text-align: center;
+        }
+
+        .section-label {
+            color: #0098b8;
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+            font-weight: 500;
+
+            margin-bottom: 5px;
+        }
+
+        .intro h2 {
+            font-size: 35px;
+
+            color: #07546a;
+
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+            color: #55727d;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .religions {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 20px 25px 80px;
+        }
+
+        .religion-card {
+            background: white;
+
+            border-radius: 25px;
+
+            margin-bottom: 40px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 35px rgba(0,100,130,0.09);
+
+            border: 1px solid #e1f3f6;
+
+            transition: 0.3s;
+        }
+
+        .religion-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 40px rgba(0,100,130,0.15);
+        }
+
+
+        /* =========================
+           CARD HEADER
+        ========================== */
+
+        .card-header {
+            min-height: 230px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 35px;
+
+            color: white;
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .card-header::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,50,70,0.82),
+                    rgba(0,120,145,0.10)
+                );
+        }
+
+        .card-title {
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .card-title span {
+            font-size: 14px;
+
+            opacity: 0.85;
+        }
+
+        .card-title h2 {
+            font-size: 34px;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           รูปภาพ
+        ========================== */
+
+        /* พุทธศาสนา
+           ภาพวัดในกรุงเทพฯ ถ่ายปี 2024 */
+
+        .buddhism {
+            background-image:
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Buddhist%20temple%20in%20Bangkok.jpg");
+        }
+
+
+        /* ศาสนาอิสลาม
+           ภาพมัสยิดเกาะปันหยี ถ่ายปี 2023 */
+
+        .islam {
+            background-image:
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Panyee%20Darussalam%20Mosque%202023.jpg");
+        }
+
+
+        /* ศาสนาฮินดู
+           ภาพปราสาทหินพนมวัน ถ่ายปี 2024
+           เป็นโบราณสถานที่มีความเกี่ยวข้องกับศาสนาฮินดู */
+
+        .hindu {
+            background-image:
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Prasat%20Hin%20Phanom%20Wan.jpg");
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .card-content {
+            padding: 35px 40px 40px;
+        }
+
+        .card-content p {
+            font-size: 17px;
+
+            color: #526c76;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           HIGHLIGHT
+        ========================== */
+
+        .highlight {
+            margin-top: 25px;
+
+            background: #eefafd;
+
+            border-left: 5px solid #00a2c7;
+
+            border-radius: 12px;
+
+            padding: 20px 25px;
+        }
+
+        .highlight-title {
+            color: #007d9c;
+
+            font-weight: 600;
+
+            margin-bottom: 5px;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================== */
+
+        .quote-section {
+            background:
+                linear-gradient(
+                    135deg,
+                    #007d9d,
+                    #00abc5
+                );
+
+            color: white;
+
+            padding: 70px 25px;
+
+            text-align: center;
+        }
+
+        .quote-section h2 {
+            font-size: 30px;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+        .quote-section p {
+            max-width: 750px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            font-weight: 300;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #073f52;
+
+            color: #ccebf0;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+
+            opacity: 0.85;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .nav-inner {
+                overflow-x: auto;
+
+                justify-content: flex-start;
+            }
+
+            .card-header {
+                min-height: 200px;
+            }
+
+            .card-title h2 {
+                font-size: 28px;
+            }
+
+            .card-content {
+                padding: 25px;
+            }
+
+            .intro h2 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                SURAT THANI · CULTURE & BELIEF
+            </div>
+
+            <h1>
+                ความเชื่อและศาสนา
+            </h1>
+
+            <p>
+                รากแห่งศรัทธาและความหลากหลายทางวัฒนธรรม
+                ที่หล่อหลอมวิถีชีวิตของชาวสุราษฎร์ธานี
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="nav">
+
+        <div class="nav-inner">
+
+            <a href="index.html">
+                หน้าหลัก
+            </a>
+
+            <a href="#buddhism">
+                พระพุทธศาสนา
+            </a>
+
+            <a href="#islam">
+                ศาสนาอิสลาม
+            </a>
+
+            <a href="#hindu">
+                ศาสนาฮินดู
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="section-label">
+            BELIEF & RELIGION
+        </div>
+
+        <h2>
+            รากแห่งศรัทธาของสุราษฎร์ธานี
+        </h2>
+
+        <p>
+            สุราษฎร์ธานีเป็นดินแดนที่มีประวัติศาสตร์และวัฒนธรรม
+            อันหลากหลาย ความเชื่อทางศาสนาได้เข้ามามีบทบาท
+            ในการหล่อหลอมวิถีชีวิต ศิลปะ ประเพณี
+            และภูมิปัญญาของผู้คนในท้องถิ่นมาอย่างยาวนาน
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         RELIGIONS
+    ========================== -->
+
+    <main class="religions">
+
+
+        <!-- =========================
+             พระพุทธศาสนา
+        ========================== -->
+
+        <article class="religion-card" id="buddhism">
+
+            <div class="card-header buddhism">
+
+                <div class="card-title">
+
+                    <span>
+                        RELIGION 01
+                    </span>
+
+                    <h2>
+                        พระพุทธศาสนา
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <p>
+                    พระพุทธศาสนาคือเสาหลักทางจิตใจที่หล่อหลอมวิถีชีวิต
+                    ของชาวสุราษฎร์ธานีมาอย่างยาวนานนับพันปี
+                    ดินแดนแห่งนี้เป็นศูนย์กลางการเผยแผ่ธรรมะ
+                    ที่มีมรดกทางปัญญาอย่าง
+                    <strong>“สวนโมกขพลาราม”</strong>
+                    ของท่านพุทธทาสภิกขุ
+                </p>
+
+                <p>
+                    อีกหนึ่งศูนย์รวมแห่งศรัทธาคือ
+                    <strong>วัดพระบรมธาตุไชยา</strong>
+                    ซึ่งเป็นโบราณสถานสำคัญที่สะท้อนอิทธิพล
+                    ของศิลปะศรีวิชัย และแนวคิดด้านจักรวาลวิทยา
+                    ผ่านองค์พระบรมธาตุ
+                </p>
+
+                <div class="highlight">
+
+                    <div class="highlight-title">
+                        ✦ เกร็ดน่ารู้
+                    </div>
+
+                    <p>
+                        สุราษฎร์ธานีมี
+                        <strong>ประเพณีชักพระ</strong>
+                        ที่สืบทอดมาอย่างยาวนาน
+                        และมีเอกลักษณ์ทั้งการชักพระทางบก
+                        และการชักพระทางน้ำในลำน้ำตาปี
+                    </p>
+
+                </div>
+
+                <p style="margin-top: 25px;">
+                    พุทธศาสนาที่นี่จึงไม่ได้เป็นเพียงเรื่องของความเชื่อ
+                    แต่เป็นส่วนหนึ่งของวิถีชีวิตที่หลอมรวมศิลปะ
+                    ประเพณี และปริศนาธรรมเข้าไว้ด้วยกัน
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             ศาสนาอิสลาม
+        ========================== -->
+
+        <article class="religion-card" id="islam">
+
+            <div class="card-header islam">
+
+                <div class="card-title">
+
+                    <span>
+                        RELIGION 02
+                    </span>
+
+                    <h2>
+                        ศาสนาอิสลาม
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <p>
+                    ศาสนาอิสลามในสุราษฎร์ธานีเป็นภาพสะท้อน
+                    ของความหลากหลายทางวัฒนธรรมที่อยู่ร่วมกัน
+                    อย่างสันติมาอย่างยาวนาน
+                    โดยมีชุมชนสำคัญบริเวณอำเภอไชยา
+                    และย่าน <strong>“พุมเรียง”</strong>
+                    ซึ่งเป็นพื้นที่สำคัญด้านวัฒนธรรมมุสลิม
+                    ของจังหวัด
+                </p>
+
+                <p>
+                    พุมเรียงยังมีชื่อเสียงด้าน
+                    <strong>“ผ้าไหมพุมเรียง”</strong>
+                    ซึ่งเป็นผ้าทอมือที่มีลวดลายอันประณีต
+                    และสะท้อนภูมิปัญญาของชุมชน
+                    โดยมีลวดลายดั้งเดิม เช่น
+                    ลายราชวัตร และลายดอกพิกุล
+                </p>
+
+                <div class="highlight">
+
+                    <div class="highlight-title">
+                        ✦ ภูมิปัญญาท้องถิ่น
+                    </div>
+
+                    <p>
+                        ผ้าไหมพุมเรียงเป็นหนึ่งในมรดกทางวัฒนธรรม
+                        ที่สะท้อนการผสมผสานระหว่างวิถีชีวิต
+                        ความเชื่อ และงานหัตถกรรมของชุมชน
+                    </p>
+
+                </div>
+
+                <p style="margin-top: 25px;">
+                    วิถีชีวิตของชาวมุสลิมในพื้นที่ผูกพันกับ
+                    การประมงชายฝั่ง การทำนา และการสืบทอด
+                    หลักธรรมทางศาสนา
+                    ศาสนาอิสลามจึงเติบโตเคียงคู่กับศาสนาอื่น
+                    และกลายเป็นส่วนหนึ่งของความหลากหลาย
+                    ทางวัฒนธรรมของสุราษฎร์ธานี
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             ศาสนาฮินดู
+        ========================== -->
+
+        <article class="religion-card" id="hindu">
+
+            <div class="card-header hindu">
+
+                <div class="card-title">
+
+                    <span>
+                        RELIGION 03
+                    </span>
+
+                    <h2>
+                        ศาสนาฮินดู
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <p>
+                    ศาสนาฮินดูเป็นหนึ่งในรากฐานความเชื่อโบราณ
+                    ที่มีบทบาทต่อการก่อเกิดอารยธรรม
+                    และเครือข่ายการค้าทางทะเลของสุราษฎร์ธานี
+                    ในอดีต
+                </p>
+
+                <p>
+                    ตั้งแต่ยุคก่อนประวัติศาสตร์จนถึงช่วงประมาณ
+                    ศตวรรษที่ 11 พื้นที่แถบนี้เป็นส่วนหนึ่ง
+                    ของเส้นทางการค้าทางทะเล
+                    ซึ่งเชื่อมโยงกับพ่อค้าและพราหมณ์จากอินเดีย
+                </p>
+
+                <div class="highlight">
+
+                    <div class="highlight-title">
+                        ✦ หลักฐานทางประวัติศาสตร์
+                    </div>
+
+                    <p>
+                        มีการค้นพบหลักฐานที่เกี่ยวข้องกับ
+                        ความเชื่อในศาสนาฮินดู เช่น
+                        <strong>ศิลาจารึกหุบเขาช่องคอย</strong>
+                        ซึ่งมีข้อความภาษาสันสกฤต
+                        และหลักฐานเกี่ยวกับการบูชาพระศิวะ
+                        รวมถึงการค้นพบเทวรูปพระนารายณ์
+                        ในพื้นที่เวียงสระ
+                    </p>
+
+                </div>
+
+                <p style="margin-top: 25px;">
+                    หลักฐานเหล่านี้สะท้อนให้เห็นถึงการเข้ามาของ
+                    ความเชื่อจากอินเดียและการแลกเปลี่ยนทางวัฒนธรรม
+                    ในดินแดนภาคใต้ แม้ปัจจุบันจะไม่มีชุมชนฮินดูโบราณ
+                    หลงเหลืออยู่ในลักษณะเดิม
+                    แต่ร่องรอยของคติความเชื่อ พิธีกรรมพราหมณ์
+                    และวัฒนธรรมจากอดีตยังคงปรากฏอยู่
+                </p>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- =========================
+         QUOTE
+    ========================== -->
+
+    <section class="quote-section">
+
+        <h2>
+            “ความเชื่อ คือร่องรอยของผู้คนในกาลเวลา”
+        </h2>
+
+        <p>
+            จากศาสนาและความศรัทธา สู่ประเพณี ศิลปะ
+            และวิถีชีวิต ความหลากหลายเหล่านี้ได้ร่วมกัน
+            สร้างอัตลักษณ์ของสุราษฎร์ธานีให้คงอยู่มาจนถึงปัจจุบัน
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            เว็บไซต์เรียนรู้ประวัติศาสตร์และวัฒนธรรมจังหวัดสุราษฎร์ธานี
+        </p>
+
+        <p>
+            Surat Thani History & Culture
+        </p>
+
+    </footer>
+
+</body>
+</html>

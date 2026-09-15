@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ภาษาสุราษฎร์ธานี | Surat Thani</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f4fbfd;
+    color: #17465a;
+    line-height: 1.9;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 7%;
+
+    box-shadow: 0 3px 20px rgba(0,100,130,0.10);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #087fa3;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #286174;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #009fc7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px 70px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0,125,160,0.58),
+            rgba(0,184,212,0.38)
+        ),
+        url("https://library.wu.ac.th/nst_localinfo/wp-content/uploads/sites/11/2024/10/%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%A1%E0%B9%83%E0%B8%8813.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+    background: rgba(0,110,140,0.08);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: -5%;
+    width: 110%;
+    height: 150px;
+
+    background: #f4fbfd;
+
+    border-radius: 50% 50% 0 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+
+    max-width: 850px;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    padding: 7px 20px;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.5);
+
+    backdrop-filter: blur(4px);
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #00a4c7;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #14536a;
+    margin-top: 5px;
+}
+
+.section-title p {
+    color: #6c8c98;
+    max-width: 700px;
+    margin: 10px auto 0;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    max-width: 1000px;
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px rgba(0,100,130,0.08);
+
+    border-left: 6px solid #08a6c7;
+}
+
+.intro p {
+    font-size: 17px;
+    color: #496b78;
+}
+
+/* =========================
+   DIALECT CARDS
+========================= */
+
+.words {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1000px;
+    margin: auto;
+}
+
+.word-card {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0,110,140,0.08);
+
+    transition: 0.35s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.word-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #008fb3,
+        #56d4e8
+    );
+}
+
+.word-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 40px rgba(0,120,150,0.15);
+}
+
+.word {
+    font-size: 34px;
+    font-weight: 600;
+
+    color: #008caf;
+
+    margin-bottom: 8px;
+}
+
+.meaning {
+    color: #64818b;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    background:
+        linear-gradient(
+            135deg,
+            #007d9e,
+            #00abc7
+        );
+
+    color: white;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.quote-section::before {
+    content: "“";
+
+    position: absolute;
+
+    font-size: 300px;
+
+    opacity: 0.08;
+
+    top: -100px;
+    left: 5%;
+}
+
+.quote-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    max-width: 900px;
+    margin: auto;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.quote-detail {
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+/* =========================
+   SLOGAN
+========================= */
+
+.slogan-box {
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 50px;
+
+    box-shadow: 0 10px 35px rgba(0,100,130,0.08);
+
+    text-align: center;
+}
+
+.slogan {
+    font-size: clamp(25px, 4vw, 43px);
+
+    color: #0086a8;
+
+    font-weight: 600;
+
+    margin: 20px 0 35px;
+}
+
+.slogan-parts {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.part {
+    background: #effaff;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    border: 1px solid #d5f2f8;
+}
+
+.part h3 {
+    color: #008cae;
+
+    margin-bottom: 8px;
+}
+
+.part p {
+    font-size: 15px;
+
+    color: #66838d;
+}
+
+/* =========================
+   CULTURE
+========================= */
+
+.culture {
+    background: #eaf8fb;
+}
+
+.culture-container {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.culture-card {
+    background: white;
+
+    padding: 0 0 35px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0,100,130,0.07);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+.culture-card:hover {
+    transform: translateY(-7px);
+}
+
+.culture-image {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+.culture-card:hover .culture-image {
+    transform: scale(1.04);
+}
+
+.culture-content {
+    padding: 28px 35px 0;
+}
+
+.culture-card h3 {
+    color: #087d9c;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    color: #5d7a84;
+
+    font-size: 16px;
+}
+
+/* =========================
+   CONNECTION
+========================= */
+
+.connection {
+    max-width: 950px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.connection p {
+    font-size: 18px;
+
+    color: #55737e;
+}
+
+.highlight {
+    color: #008cab;
+    font-weight: 500;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box {
+    max-width: 1000px;
+
+    height: 380px;
+
+    margin: 50px auto 0;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0,100,130,0.12);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+.image-box:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #063f52;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+footer h3 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #b7dce5;
+
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 14px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 380px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 65px 5%;
+    }
+
+    .intro {
+        padding: 30px 25px;
+    }
+
+    .quote {
+        font-size: 19px;
+    }
+
+    .slogan-box {
+        padding: 35px 20px;
+    }
+
+    .culture-image {
+        height: 200px;
+    }
+
+    .culture-content {
+        padding: 25px;
+    }
+
+    .image-box {
+        height: 260px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        SURAT THANI
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="#language">ภาษา</a></li>
+        <li><a href="#words">คำถิ่นใต้</a></li>
+        <li><a href="#culture">ศิลปวัฒนธรรม</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            ภาษาและอัตลักษณ์ท้องถิ่น
+        </div>
+
+        <h1>
+            ภาษาสุราษฎร์ธานี
+        </h1>
+
+        <p>
+            เสียงสำเนียงและถ้อยคำที่สะท้อนวิถีชีวิต
+            ความคิด และวัฒนธรรมของชาวสุราษฎร์ธานี
+        </p>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section id="language">
+
+    <div class="section-title">
+
+        <span>LOCAL LANGUAGE</span>
+
+        <h2>ภาษาถิ่นใต้กับชาวสุราษฎร์ธานี</h2>
+
+        <p>
+            ภาษาไม่ได้เป็นเพียงเครื่องมือในการสื่อสาร
+            แต่ยังเป็นส่วนหนึ่งของอัตลักษณ์ท้องถิ่น
+        </p>
+
+    </div>
+
+
+    <div class="intro">
+
+        <p>
+            จังหวัดสุราษฎร์ธานีมีเอกลักษณ์ทางภาษาและวัฒนธรรม
+            ที่โดดเด่น โดยภาษาที่คนในท้องถิ่นใช้กันเป็นหลักคือ
+            <strong>ภาษาไทยถิ่นใต้</strong>
+            ซึ่งมีสำเนียง น้ำเสียง และคำศัพท์เฉพาะ
+            ที่แตกต่างจากภาษาไทยมาตรฐาน
+        </p>
+
+        <br>
+
+        <p>
+            การใช้ภาษาถิ่นไม่ได้เป็นเพียงการสื่อสารในชีวิตประจำวัน
+            เท่านั้น แต่ยังสะท้อนถึงวิถีชีวิต ความคิด
+            และวัฒนธรรมของคนในท้องถิ่นอีกด้วย
+            ภาษาถิ่นจึงเป็นสิ่งที่ช่วยสร้างความรู้สึกถึง
+            ความเป็นคนท้องถิ่นและความผูกพันระหว่างผู้คนในชุมชน
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIALECT WORDS
+========================= -->
+
+<section id="words">
+
+    <div class="section-title">
+
+        <span>SOUTHERN DIALECT</span>
+
+        <h2>รู้จักคำถิ่นใต้</h2>
+
+        <p>
+            ตัวอย่างคำที่พบได้ในการพูดคุยในชีวิตประจำวัน
+        </p>
+
+    </div>
+
+
+    <div class="words">
+
+        <div class="word-card">
+
+            <div class="word">
+                หรอย
+            </div>
+
+            <div class="meaning">
+                หมายถึง <strong>อร่อย</strong>
+            </div>
+
+        </div>
+
+
+        <div class="word-card">
+
+            <div class="word">
+                แหลง
+            </div>
+
+            <div class="meaning">
+                หมายถึง <strong>พูด</strong>
+            </div>
+
+        </div>
+
+
+        <div class="word-card">
+
+            <div class="word">
+                แล
+            </div>
+
+            <div class="meaning">
+                หมายถึง <strong>ดูหรือมอง</strong>
+            </div>
+
+        </div>
+
+
+        <div class="word-card">
+
+            <div class="word">
+                พรือ
+            </div>
+
+            <div class="meaning">
+                หมายถึง <strong>อย่างไร</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="quote-section">
+
+    <h2>ภาษาคือเสียงของท้องถิ่น</h2>
+
+    <div class="quote">
+
+        “ภาษาถิ่นไม่ใช่เพียงคำพูด
+        แต่คือเรื่องราวของผู้คนและชุมชน”
+
+    </div>
+
+    <div class="quote-detail">
+
+        สำเนียง คำศัพท์ และวิธีการพูด
+        ล้วนเป็นส่วนหนึ่งของอัตลักษณ์ท้องถิ่น
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SLOGAN
+========================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <span>SURAT THANI IDENTITY</span>
+
+        <h2>คำขวัญประจำจังหวัด</h2>
+
+    </div>
+
+
+    <div class="slogan-box">
+
+        <div class="slogan">
+
+            “เมืองร้อยเกาะ เงาะอร่อย หอยใหญ่
+            ไข่แดง แหล่งธรรมะ”
+
+        </div>
+
+
+        <div class="slogan-parts">
+
+            <div class="part">
+
+                <h3>เมืองร้อยเกาะ</h3>
+
+                <p>
+                    สื่อถึงลักษณะทางภูมิศาสตร์ของจังหวัด
+                    ที่มีหมู่เกาะและเกาะต่าง ๆ มากมาย
+                    เช่น เกาะสมุย เกาะพะงัน
+                    และหมู่เกาะอ่างทอง
+                </p>
+
+            </div>
+
+
+            <div class="part">
+
+                <h3>เงาะอร่อย</h3>
+
+                <p>
+                    หมายถึงเงาะโรงเรียนนาสาร
+                    ผลไม้ขึ้นชื่อของอำเภอบ้านนาสาร
+                </p>
+
+            </div>
+
+
+            <div class="part">
+
+                <h3>หอยใหญ่</h3>
+
+                <p>
+                    สื่อถึงหอยนางรมสุราษฎร์ธานี
+                    ที่มีชื่อเสียงด้านคุณภาพและรสชาติ
+                </p>
+
+            </div>
+
+
+            <div class="part">
+
+                <h3>ไข่แดง</h3>
+
+                <p>
+                    หมายถึงไข่เค็มไชยา
+                    ผลิตภัณฑ์อาหารชื่อดังของอำเภอไชยา
+                </p>
+
+            </div>
+
+
+            <div class="part">
+
+                <h3>แหล่งธรรมะ</h3>
+
+                <p>
+                    สะท้อนความสำคัญด้านพระพุทธศาสนา
+                    และสถานที่ทางศาสนา เช่น
+                    วัดพระบรมธาตุไชยาราชวรวิหาร
+                    และสวนโมกขพลาราม
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CULTURE
+========================= -->
+
+<section id="culture" class="culture">
+
+    <div class="section-title">
+
+        <span>LOCAL CULTURE</span>
+
+        <h2>ภาษาในศิลปวัฒนธรรม</h2>
+
+        <p>
+            ภาษาถิ่นยังคงปรากฏอยู่ในศิลปะการแสดง
+            และการถ่ายทอดเรื่องราวของคนใต้
+        </p>
+
+    </div>
+
+
+    <div class="culture-container">
+
+
+        <!-- โนรา -->
+
+        <div class="culture-card">
+
+            <img
+                class="culture-image"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Nora%20Rongkru.jpg"
+                alt="การแสดงโนราในจังหวัดสุราษฎร์ธานี"
+                loading="lazy"
+            >
+
+            <div class="culture-content">
+
+                <h3>โนรา</h3>
+
+                <p>
+                    ศิลปะการแสดงพื้นบ้านภาคใต้
+                    ที่มีทั้งการร่ายรำ ดนตรี การขับร้อง
+                    และการใช้ภาษาถิ่น
+                    สะท้อนวิถีชีวิตและความเชื่อ
+                    ของผู้คนในท้องถิ่น
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- หนังตะลุง -->
+
+        <div class="culture-card">
+
+            <img
+                class="culture-image"
+                src="https://static.naewna.com/uploads/news/gallery/source/1138841.jpg"
+                alt="การแสดงหนังตะลุงภาคใต้"
+                loading="lazy"
+            >
+
+            <div class="culture-content">
+
+                <h3>หนังตะลุง</h3>
+
+                <p>
+                    การแสดงพื้นบ้านที่ใช้ตัวหนัง
+                    ดนตรี การพากย์ และบทสนทนา
+                    โดยภาษาถิ่นใต้เป็นส่วนสำคัญ
+                    ในการสร้างอรรถรสและถ่ายทอดเรื่องราว
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- เพลงบอก -->
+
+        <div class="culture-card">
+
+            <img
+                class="culture-image"
+                src="https://library.wu.ac.th/nst_localinfo/wp-content/uploads/sites/11/2024/10/%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87%E0%B8%9A%E0%B8%AD%E0%B8%81.jpg"
+                alt="การขับเพลงบอกภาคใต้"
+                loading="lazy"
+            >
+
+            <div class="culture-content">
+
+                <h3>เพลงบอก</h3>
+
+                <p>
+                    การขับร้องโต้ตอบและบอกเล่าเรื่องราวต่าง ๆ
+                    ด้วยภาษาถิ่นใต้
+                    เป็นทั้งรูปแบบการถ่ายทอดความรู้
+                    และความบันเทิงของคนในท้องถิ่น
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     IMAGE
+========================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <span>LOCAL IDENTITY</span>
+
+        <h2>เสียงของสุราษฎร์ธานี</h2>
+
+        <p>
+            ภาษา ศิลปะ และวัฒนธรรม
+            ล้วนเชื่อมโยงกับวิถีชีวิตของผู้คน
+        </p>
+
+    </div>
+
+
+    <div class="connection">
+
+        <p>
+
+            ภาษาถิ่นใต้ที่ใช้ในสุราษฎร์ธานี
+            จึงไม่ได้เป็นเพียงรูปแบบการพูดเท่านั้น
+            แต่ยังเป็นส่วนหนึ่งของ
+
+            <span class="highlight">
+
+                อัตลักษณ์ วัฒนธรรม ประวัติศาสตร์
+                และวิถีชีวิตของคนในท้องถิ่น
+
+            </span>
+
+        </p>
+
+    </div>
+
+
+    <div class="image-box">
+
+        <img
+            src="https://ich.unesco.org/img/photo/src/14180.jpg"
+            alt="การแสดงโนราศิลปะพื้นบ้านภาคใต้"
+            loading="lazy"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>SURAT THANI</h3>
+
+    <p>
+        ภาษาและวัฒนธรรมท้องถิ่นสุราษฎร์ธานี
+    </p>
+
+    <p>
+        © 2026 Surat Thani Cultural Website
+    </p>
+
+</footer>
+
+
+</body>
+</html>
