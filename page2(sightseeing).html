@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>สถานที่ท่องเที่ยวสุราษฎร์ธานี | Surat Thani Travel</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            background: #f4fbfd;
+            color: #16445a;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+
+            box-shadow: 0 3px 20px rgba(0, 120, 160, 0.12);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008caf;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #16445a;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #16445a;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00a5c8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            height: 85vh;
+            min-height: 600px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            /*
+            รูปพื้นหลัง:
+            อุทยานธรรมเขานาในหลวง
+            */
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 105, 140, 0.42),
+                    rgba(0, 45, 70, 0.68)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:Redirect/file/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87_%E0%B8%95.%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%A2%E0%B8%A7%E0%B8%99_%E0%B8%AD.%E0%B8%9E%E0%B8%99%E0%B8%A1_%E0%B8%88.%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8F%E0%B8%A3%E0%B9%8C%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .hero-content .small-title {
+            letter-spacing: 4px;
+            font-size: 15px;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 30px);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .scroll-down {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 30px;
+
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 50px;
+
+            color: white;
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .scroll-down:hover {
+            background: white;
+            color: #008caf;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================== */
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            padding: 90px 25px 60px;
+        }
+
+        .section-label {
+            color: #00a5c8;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+
+        .intro h2 {
+            font-size: 38px;
+            color: #16445a;
+            margin: 10px 0 20px;
+        }
+
+        .intro p {
+            color: #527383;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PLACE CARDS
+        ========================== */
+
+        .places {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            padding-bottom: 100px;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+
+            box-shadow: 0 10px 35px rgba(0, 130, 170, 0.10);
+
+            transition: 0.35s;
+        }
+
+        .place-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 45px rgba(0, 130, 170, 0.18);
+        }
+
+        .place-card.featured {
+            grid-column: span 2;
+        }
+
+        .place-image {
+            height: 300px;
+            overflow: hidden;
+            background: #dff4f8;
+        }
+
+        .place-card.featured .place-image {
+            height: 400px;
+        }
+
+        .place-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+        .place-card:hover .place-image img {
+            transform: scale(1.05);
+        }
+
+        .place-content {
+            padding: 30px;
+        }
+
+        .number {
+            display: inline-block;
+
+            color: white;
+            background: #00a5c8;
+
+            padding: 3px 13px;
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+        .place-content h2 {
+            color: #16445a;
+            font-size: 28px;
+            margin-bottom: 3px;
+        }
+
+        .place-content h3 {
+            color: #00a5c8;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .place-content p {
+            color: #587482;
+            font-size: 15px;
+        }
+
+        .highlight {
+            margin-top: 20px;
+            padding: 18px 20px;
+
+            background: #eefafd;
+            border-left: 4px solid #00a5c8;
+
+            border-radius: 10px;
+
+            color: #326477;
+            font-size: 14px;
+        }
+
+        .highlight strong {
+            color: #008caf;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================== */
+
+        .quote {
+            background:
+                linear-gradient(
+                    135deg,
+                    #008caf,
+                    #00b7d4
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 90px 25px;
+        }
+
+        .quote h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .quote p {
+            max-width: 800px;
+            margin: auto;
+
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #083b4d;
+            color: rgba(255,255,255,0.75);
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 14px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .places {
+                grid-template-columns: 1fr;
+                width: 92%;
+            }
+
+            .place-card.featured {
+                grid-column: span 1;
+            }
+
+            .place-card.featured .place-image {
+                height: 300px;
+            }
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .place-content h2 {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        SURAT <span>THANI</span>
+    </a>
+
+    <ul>
+
+        <li>
+            <a href="index.html">หน้าหลัก</a>
+        </li>
+
+        <li>
+            <a href="history.html">ประวัติศาสตร์</a>
+        </li>
+
+        <li>
+            <a href="belief.html">ความเชื่อ</a>
+        </li>
+
+        <li>
+            <a href="culture.html">วัฒนธรรม</a>
+        </li>
+
+        <li>
+            <a href="travel.html">ท่องเที่ยว</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            SURAT THANI • TRAVEL
+        </div>
+
+        <h1>สถานที่ท่องเที่ยว</h1>
+
+        <h2>ค้นพบเสน่ห์แห่งสุราษฎร์ธานี</h2>
+
+        <p>
+            จากเกาะกลางทะเลสีคราม สู่ขุนเขา ป่าไม้
+            และมรดกทางวัฒนธรรม
+            ออกเดินทางไปค้นพบสถานที่อันงดงามของสุราษฎร์ธานี
+        </p>
+
+        <a href="#places" class="scroll-down">
+            สำรวจสถานที่ท่องเที่ยว ↓
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     INTRO
+========================== -->
+
+<section class="intro">
+
+    <div class="section-label">
+        DISCOVER SURAT THANI
+    </div>
+
+    <h2>มากกว่าการเดินทาง</h2>
+
+    <p>
+        สุราษฎร์ธานีไม่ได้มีเพียงท้องทะเลสีคราม
+        แต่ยังเต็มไปด้วยเกาะสวยงาม โบราณสถาน
+        ศาสนสถาน ผืนป่า และเรื่องราวทางประวัติศาสตร์
+        ที่รอให้ทุกคนออกไปค้นพบ
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     PLACES
+========================== -->
+
+<section class="places" id="places">
+
+
+
+    <!-- =====================
+         01 เกาะสมุย
+    ====================== -->
+
+    <article class="place-card featured">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Koh_Samui,_Beach,_Thailand.jpg"
+                alt="เกาะสมุย"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">01</span>
+
+            <h2>เกาะสมุย</h2>
+
+            <h3>สวรรค์กลางอ่าวไทย</h3>
+
+            <p>
+                เกาะสมุย หรือดินแดนที่ได้รับการขนานนามว่า
+                “สวรรค์กลางอ่าวไทย” เป็นเกาะขนาดใหญ่ที่อบอวล
+                ไปด้วยมนต์เสน่ห์อันเป็นเอกลักษณ์
+                ทอดตัวอย่างสง่างามท่ามกลางผืนน้ำสีคราม
+                ของจังหวัดสุราษฎร์ธานี
+            </p>
+
+            <p style="margin-top: 12px;">
+                เกาะสมุยโดดเด่นด้วยชายหาดสีขาว
+                น้ำทะเลใส และธรรมชาติอันสวยงาม
+                จึงกลายเป็นหนึ่งในจุดหมายปลายทางยอดนิยม
+                ของนักท่องเที่ยวทั้งชาวไทยและชาวต่างชาติ
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                ชายหาดสีขาว • น้ำทะเลสีคราม •
+                ธรรมชาติ • บรรยากาศพักผ่อน
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         02 วัดพระบรมธาตุไชยา
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wat_Phra_Borommathat_Chaiya_Ratcha_Worawihan.jpg"
+                alt="วัดพระบรมธาตุไชยาราชวรวิหาร"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">02</span>
+
+            <h2>วัดพระบรมธาตุไชยาราชวรวิหาร</h2>
+
+            <h3>มรดกศิลปะศรีวิชัยกว่า 1,000 ปี</h3>
+
+            <p>
+                โบราณสถานศักดิ์สิทธิ์คู่เมืองสุราษฎร์ธานี
+                ที่หยั่งรากลึกผ่านกาลเวลามายาวนานกว่า
+                1,000 ปี โดดเด่นด้วยพระบรมธาตุไชยา
+                เจดีย์ศิลปะศรีวิชัยที่มีความงดงาม
+                และสมบูรณ์อย่างยิ่ง
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                ศิลปะศรีวิชัย • พระบรมธาตุ •
+                ประวัติศาสตร์ • วัฒนธรรม
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         03 อุทยานธรรมเขานาในหลวง
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87_%E0%B8%95.%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%A2%E0%B8%A7%E0%B8%99_%E0%B8%AD.%E0%B8%9E%E0%B8%99%E0%B8%A1_%E0%B8%88.%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8F%E0%B8%A3%E0%B9%8C%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5.jpg"
+                alt="อุทยานธรรมเขานาในหลวง"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">03</span>
+
+            <h2>อุทยานธรรมเขานาในหลวง</h2>
+
+            <h3>ศรัทธาแห่งขุนเขาและแสงแรกของวัน</h3>
+
+            <p>
+                อุทยานธรรมเขานาในหลวงเกิดขึ้นจากพลังศรัทธา
+                ของพระอาจารย์ไพรวัลย์และชาวบ้าน
+                เพื่อสร้างศาสนสถานท่ามกลางธรรมชาติ
+                อันร่มรื่นของหุบเขา
+            </p>
+
+            <p style="margin-top: 12px;">
+                จุดเด่นคือเจดีย์ลอยฟ้าพระพุทธศิลาวดี
+                และซุ้มประตูพุทธวดี 9 ยอด
+                ซึ่งในยามเช้าแสงอาทิตย์จะสาดส่อง
+                ผ่านช่องซุ้มประตู เกิดเป็นภาพที่งดงาม
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                เจดีย์ลอยฟ้า • ซุ้มประตู 9 ยอด •
+                ภูเขา • พระอาทิตย์ยามเช้า
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         04 เกาะพะงัน
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Haad_Yao,_Ko_Phangan_in_2023_1.jpg"
+                alt="เกาะพะงัน"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">04</span>
+
+            <h2>เกาะพะงัน</h2>
+
+            <h3>เกาะแห่งธรรมชาติ ประวัติศาสตร์ และวิถีชีวิต</h3>
+
+            <p>
+                เกาะพะงันตั้งอยู่กลางอ่าวไทย
+                โดยชื่อ “พะงัน” มีที่มาจากคำว่า “งัน”
+                ซึ่งหมายถึงสันทรายหรือแนวหินโสโครก
+                ใต้ทะเลที่โผล่ขึ้นมาเมื่อน้ำลด
+            </p>
+
+            <p style="margin-top: 12px;">
+                พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว
+                รัชกาลที่ 5 เคยเสด็จประพาสเกาะพะงัน
+                หลายครั้ง และทรงโปรดความงดงาม
+                ของน้ำตกธารเสด็จ
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                น้ำตกธารเสด็จ • ชายหาด •
+                ประวัติศาสตร์ • วิถีชีวิตชุมชน
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         05 ถ้ำปะการัง
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://www.khaosoktravel.com/coral-cave-cheow-lan-lake"
+                alt="ถ้ำปะการัง เขาสก"
+                onerror="this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Limestone_in_Pakarang_cave_2.JPG';"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">05</span>
+
+            <h2>ถ้ำปะการัง</h2>
+
+            <h3>มหัศจรรย์ใต้ผืนป่าเขาสก</h3>
+
+            <p>
+                ถ้ำปะการังซ่อนตัวอยู่ท่ามกลางธรรมชาติ
+                เหนืออ่างเก็บน้ำเชี่ยวหลาน
+                รายล้อมด้วยขุนเขาหินปูนสลับซับซ้อน
+                จนเกิดเป็นทัศนียภาพที่สวยงามราวกับภาพวาด
+            </p>
+
+            <p style="margin-top: 12px;">
+                หยาดน้ำฝนที่กัดเซาะหินปูนมาเป็นเวลายาวนาน
+                ก่อให้เกิดหินงอกและหินย้อยรูปร่างแปลกตา
+                คล้ายแนวปะการังใต้ทะเล
+                ภายในถ้ำยังมีโครงสร้างหินปูนที่เกิดขึ้น
+                จากสภาพแวดล้อมทางธรณีวิทยาในอดีต
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                หินงอกหินย้อย • ธรณีวิทยา •
+                ภูเขาหินปูน • เชี่ยวหลาน
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================
+     QUOTE
+========================== -->
+
+<section class="quote">
+
+    <h2>“สุราษฎร์ธานี มากกว่าจุดหมายปลายทาง”</h2>
+
+    <p>
+        จากผืนทะเลสีครามของเกาะสมุยและเกาะพะงัน
+        สู่ร่องรอยอารยธรรมโบราณของไชยา
+        ผ่านศรัทธาท่ามกลางขุนเขา
+        และเข้าสู่โลกใต้พิภพของเขาสก
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <h3>SURAT THANI</h3>
+
+    <p>
+        Explore • Experience • Remember
+    </p>
+
+    <p style="margin-top: 10px;">
+        เว็บไซต์แนะนำจังหวัดสุราษฎร์ธานี
+    </p>
+
+</footer>
+
+
+</body>
+</html><!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>สถานที่ท่องเที่ยวสุราษฎร์ธานี | Surat Thani Travel</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            background: #f4fbfd;
+            color: #16445a;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+
+            box-shadow: 0 3px 20px rgba(0, 120, 160, 0.12);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #008caf;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #16445a;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #16445a;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00a5c8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            height: 85vh;
+            min-height: 600px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            /*
+            รูปพื้นหลัง:
+            อุทยานธรรมเขานาในหลวง
+            */
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 105, 140, 0.42),
+                    rgba(0, 45, 70, 0.68)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:Redirect/file/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87_%E0%B8%95.%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%A2%E0%B8%A7%E0%B8%99_%E0%B8%AD.%E0%B8%9E%E0%B8%99%E0%B8%A1_%E0%B8%88.%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8F%E0%B8%A3%E0%B9%8C%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .hero-content .small-title {
+            letter-spacing: 4px;
+            font-size: 15px;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 30px);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .scroll-down {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 30px;
+
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 50px;
+
+            color: white;
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .scroll-down:hover {
+            background: white;
+            color: #008caf;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================== */
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            padding: 90px 25px 60px;
+        }
+
+        .section-label {
+            color: #00a5c8;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+
+        .intro h2 {
+            font-size: 38px;
+            color: #16445a;
+            margin: 10px 0 20px;
+        }
+
+        .intro p {
+            color: #527383;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PLACE CARDS
+        ========================== */
+
+        .places {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            padding-bottom: 100px;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+
+            box-shadow: 0 10px 35px rgba(0, 130, 170, 0.10);
+
+            transition: 0.35s;
+        }
+
+        .place-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 45px rgba(0, 130, 170, 0.18);
+        }
+
+        .place-card.featured {
+            grid-column: span 2;
+        }
+
+        .place-image {
+            height: 300px;
+            overflow: hidden;
+            background: #dff4f8;
+        }
+
+        .place-card.featured .place-image {
+            height: 400px;
+        }
+
+        .place-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+        .place-card:hover .place-image img {
+            transform: scale(1.05);
+        }
+
+        .place-content {
+            padding: 30px;
+        }
+
+        .number {
+            display: inline-block;
+
+            color: white;
+            background: #00a5c8;
+
+            padding: 3px 13px;
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+        .place-content h2 {
+            color: #16445a;
+            font-size: 28px;
+            margin-bottom: 3px;
+        }
+
+        .place-content h3 {
+            color: #00a5c8;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .place-content p {
+            color: #587482;
+            font-size: 15px;
+        }
+
+        .highlight {
+            margin-top: 20px;
+            padding: 18px 20px;
+
+            background: #eefafd;
+            border-left: 4px solid #00a5c8;
+
+            border-radius: 10px;
+
+            color: #326477;
+            font-size: 14px;
+        }
+
+        .highlight strong {
+            color: #008caf;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================== */
+
+        .quote {
+            background:
+                linear-gradient(
+                    135deg,
+                    #008caf,
+                    #00b7d4
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 90px 25px;
+        }
+
+        .quote h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .quote p {
+            max-width: 800px;
+            margin: auto;
+
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #083b4d;
+            color: rgba(255,255,255,0.75);
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 14px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .places {
+                grid-template-columns: 1fr;
+                width: 92%;
+            }
+
+            .place-card.featured {
+                grid-column: span 1;
+            }
+
+            .place-card.featured .place-image {
+                height: 300px;
+            }
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .place-content h2 {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        SURAT <span>THANI</span>
+    </a>
+
+    <ul>
+
+        <li>
+            <a href="index.html">หน้าหลัก</a>
+        </li>
+
+        <li>
+            <a href="history.html">ประวัติศาสตร์</a>
+        </li>
+
+        <li>
+            <a href="belief.html">ความเชื่อ</a>
+        </li>
+
+        <li>
+            <a href="culture.html">วัฒนธรรม</a>
+        </li>
+
+        <li>
+            <a href="travel.html">ท่องเที่ยว</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            SURAT THANI • TRAVEL
+        </div>
+
+        <h1>สถานที่ท่องเที่ยว</h1>
+
+        <h2>ค้นพบเสน่ห์แห่งสุราษฎร์ธานี</h2>
+
+        <p>
+            จากเกาะกลางทะเลสีคราม สู่ขุนเขา ป่าไม้
+            และมรดกทางวัฒนธรรม
+            ออกเดินทางไปค้นพบสถานที่อันงดงามของสุราษฎร์ธานี
+        </p>
+
+        <a href="#places" class="scroll-down">
+            สำรวจสถานที่ท่องเที่ยว ↓
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     INTRO
+========================== -->
+
+<section class="intro">
+
+    <div class="section-label">
+        DISCOVER SURAT THANI
+    </div>
+
+    <h2>มากกว่าการเดินทาง</h2>
+
+    <p>
+        สุราษฎร์ธานีไม่ได้มีเพียงท้องทะเลสีคราม
+        แต่ยังเต็มไปด้วยเกาะสวยงาม โบราณสถาน
+        ศาสนสถาน ผืนป่า และเรื่องราวทางประวัติศาสตร์
+        ที่รอให้ทุกคนออกไปค้นพบ
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     PLACES
+========================== -->
+
+<section class="places" id="places">
+
+
+
+    <!-- =====================
+         01 เกาะสมุย
+    ====================== -->
+
+    <article class="place-card featured">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Koh_Samui,_Beach,_Thailand.jpg"
+                alt="เกาะสมุย"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">01</span>
+
+            <h2>เกาะสมุย</h2>
+
+            <h3>สวรรค์กลางอ่าวไทย</h3>
+
+            <p>
+                เกาะสมุย หรือดินแดนที่ได้รับการขนานนามว่า
+                “สวรรค์กลางอ่าวไทย” เป็นเกาะขนาดใหญ่ที่อบอวล
+                ไปด้วยมนต์เสน่ห์อันเป็นเอกลักษณ์
+                ทอดตัวอย่างสง่างามท่ามกลางผืนน้ำสีคราม
+                ของจังหวัดสุราษฎร์ธานี
+            </p>
+
+            <p style="margin-top: 12px;">
+                เกาะสมุยโดดเด่นด้วยชายหาดสีขาว
+                น้ำทะเลใส และธรรมชาติอันสวยงาม
+                จึงกลายเป็นหนึ่งในจุดหมายปลายทางยอดนิยม
+                ของนักท่องเที่ยวทั้งชาวไทยและชาวต่างชาติ
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                ชายหาดสีขาว • น้ำทะเลสีคราม •
+                ธรรมชาติ • บรรยากาศพักผ่อน
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         02 วัดพระบรมธาตุไชยา
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wat_Phra_Borommathat_Chaiya_Ratcha_Worawihan.jpg"
+                alt="วัดพระบรมธาตุไชยาราชวรวิหาร"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">02</span>
+
+            <h2>วัดพระบรมธาตุไชยาราชวรวิหาร</h2>
+
+            <h3>มรดกศิลปะศรีวิชัยกว่า 1,000 ปี</h3>
+
+            <p>
+                โบราณสถานศักดิ์สิทธิ์คู่เมืองสุราษฎร์ธานี
+                ที่หยั่งรากลึกผ่านกาลเวลามายาวนานกว่า
+                1,000 ปี โดดเด่นด้วยพระบรมธาตุไชยา
+                เจดีย์ศิลปะศรีวิชัยที่มีความงดงาม
+                และสมบูรณ์อย่างยิ่ง
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                ศิลปะศรีวิชัย • พระบรมธาตุ •
+                ประวัติศาสตร์ • วัฒนธรรม
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         03 อุทยานธรรมเขานาในหลวง
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87_%E0%B8%95.%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%A2%E0%B8%A7%E0%B8%99_%E0%B8%AD.%E0%B8%9E%E0%B8%99%E0%B8%A1_%E0%B8%88.%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8F%E0%B8%A3%E0%B9%8C%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5.jpg"
+                alt="อุทยานธรรมเขานาในหลวง"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">03</span>
+
+            <h2>อุทยานธรรมเขานาในหลวง</h2>
+
+            <h3>ศรัทธาแห่งขุนเขาและแสงแรกของวัน</h3>
+
+            <p>
+                อุทยานธรรมเขานาในหลวงเกิดขึ้นจากพลังศรัทธา
+                ของพระอาจารย์ไพรวัลย์และชาวบ้าน
+                เพื่อสร้างศาสนสถานท่ามกลางธรรมชาติ
+                อันร่มรื่นของหุบเขา
+            </p>
+
+            <p style="margin-top: 12px;">
+                จุดเด่นคือเจดีย์ลอยฟ้าพระพุทธศิลาวดี
+                และซุ้มประตูพุทธวดี 9 ยอด
+                ซึ่งในยามเช้าแสงอาทิตย์จะสาดส่อง
+                ผ่านช่องซุ้มประตู เกิดเป็นภาพที่งดงาม
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                เจดีย์ลอยฟ้า • ซุ้มประตู 9 ยอด •
+                ภูเขา • พระอาทิตย์ยามเช้า
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         04 เกาะพะงัน
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Haad_Yao,_Ko_Phangan_in_2023_1.jpg"
+                alt="เกาะพะงัน"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">04</span>
+
+            <h2>เกาะพะงัน</h2>
+
+            <h3>เกาะแห่งธรรมชาติ ประวัติศาสตร์ และวิถีชีวิต</h3>
+
+            <p>
+                เกาะพะงันตั้งอยู่กลางอ่าวไทย
+                โดยชื่อ “พะงัน” มีที่มาจากคำว่า “งัน”
+                ซึ่งหมายถึงสันทรายหรือแนวหินโสโครก
+                ใต้ทะเลที่โผล่ขึ้นมาเมื่อน้ำลด
+            </p>
+
+            <p style="margin-top: 12px;">
+                พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว
+                รัชกาลที่ 5 เคยเสด็จประพาสเกาะพะงัน
+                หลายครั้ง และทรงโปรดความงดงาม
+                ของน้ำตกธารเสด็จ
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                น้ำตกธารเสด็จ • ชายหาด •
+                ประวัติศาสตร์ • วิถีชีวิตชุมชน
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================
+         05 ถ้ำปะการัง
+    ====================== -->
+
+    <article class="place-card">
+
+        <div class="place-image">
+
+            <img
+                src="https://www.khaosoktravel.com/coral-cave-cheow-lan-lake"
+                alt="ถ้ำปะการัง เขาสก"
+                onerror="this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Limestone_in_Pakarang_cave_2.JPG';"
+            >
+
+        </div>
+
+        <div class="place-content">
+
+            <span class="number">05</span>
+
+            <h2>ถ้ำปะการัง</h2>
+
+            <h3>มหัศจรรย์ใต้ผืนป่าเขาสก</h3>
+
+            <p>
+                ถ้ำปะการังซ่อนตัวอยู่ท่ามกลางธรรมชาติ
+                เหนืออ่างเก็บน้ำเชี่ยวหลาน
+                รายล้อมด้วยขุนเขาหินปูนสลับซับซ้อน
+                จนเกิดเป็นทัศนียภาพที่สวยงามราวกับภาพวาด
+            </p>
+
+            <p style="margin-top: 12px;">
+                หยาดน้ำฝนที่กัดเซาะหินปูนมาเป็นเวลายาวนาน
+                ก่อให้เกิดหินงอกและหินย้อยรูปร่างแปลกตา
+                คล้ายแนวปะการังใต้ทะเล
+                ภายในถ้ำยังมีโครงสร้างหินปูนที่เกิดขึ้น
+                จากสภาพแวดล้อมทางธรณีวิทยาในอดีต
+            </p>
+
+            <div class="highlight">
+
+                <strong>✦ ไฮไลต์</strong><br>
+
+                หินงอกหินย้อย • ธรณีวิทยา •
+                ภูเขาหินปูน • เชี่ยวหลาน
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================
+     QUOTE
+========================== -->
+
+<section class="quote">
+
+    <h2>“สุราษฎร์ธานี มากกว่าจุดหมายปลายทาง”</h2>
+
+    <p>
+        จากผืนทะเลสีครามของเกาะสมุยและเกาะพะงัน
+        สู่ร่องรอยอารยธรรมโบราณของไชยา
+        ผ่านศรัทธาท่ามกลางขุนเขา
+        และเข้าสู่โลกใต้พิภพของเขาสก
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <h3>SURAT THANI</h3>
+
+    <p>
+        Explore • Experience • Remember
+    </p>
+
+    <p style="margin-top: 10px;">
+        เว็บไซต์แนะนำจังหวัดสุราษฎร์ธานี
+    </p>
+
+</footer>
+
+
+</body>
+</html>
